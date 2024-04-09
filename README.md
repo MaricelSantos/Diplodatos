@@ -35,29 +35,16 @@ Este repositorio contiene los entregables prácticos correspondientes a cada una
 
 ### **Estructura:**
 
-**1. :**.
+**1.BigData :** Programación Distribuida sobre Grandes Volúmenes de Datos.
 - **Docentes:**
-    - 
+    - Damián Barsotti (UNC)
+    - Illak Zapata
 
 - **Estudiantes:**
-    - Gastelu, Gabriela (media completa).
-    - Santos, Maricel (media completa).
-    - Agustina Maini (media materia).
-    - Ezequiel Acosta (media materia).
-    - Candelaria Bosch (media materia).
+    - Santos, Maricel (materia completa).
+    - Sadir, Ines (materia completa).
 
-**2. :**.
-- **Docentes:**
-    - 
-
-- **Estudiantes:**
-    - Gastelu, Gabriela (media completa).
-    - Santos, Maricel (media completa).
-    - Agustina Maini (media materia).
-    - Ezequiel Acosta (media materia).
-    - Candelaria Bosch (media materia).
-
-**3. MCDM:** Métodos Multicriterio.
+**2. MCDM:** Multiple Criteria Decision Making.
 - **Docentes:**
     - Juan B. Cabral (FaMAF-UNC-CONICET)
     - Nadia Luzcywo (FCE-UNC)
@@ -69,7 +56,7 @@ Este repositorio contiene los entregables prácticos correspondientes a cada una
     - Ezequiel Acosta (media materia).
     - Candelaria Bosch (media materia).
 
-**4. DL:** 
+**3. DL:** Introducción al Deep Learning.
 - **Docentes:**
     - Johanna Analiz Frau (Mercado Libre).
     - Nindiría Armenta Guerrero (fyo).
@@ -85,6 +72,12 @@ Este repositorio contiene los entregables prácticos correspondientes a cada una
 
 - **Mentora:**
     - [Tamara Maggioni](www.linkedin.com/in/tam-maggio)
+
+**Integrantes:**
+- Gastelu, Gabriela
+- Santos, Maricel
+- Carubelli, Marianela
+- Rubio, Natalia 
 
 En este proyecto se propone mitigar los efectos del cambio climático mediante el análisis de la eficiencia energética de una de las industrias más contaminates (en términos de sus emisiones de CO2) a escala global: la industria de la construcción. Se busca predecir el consumo energético de las edificaciones utilizando un set de datos que contempla algunas características de edificios ubicados en la costa NE de Estados Unidos (mayormente Nueva York) junto con datos climáticos y meteorológicos de los sitios donde dichos edificios están emplazados.
 
