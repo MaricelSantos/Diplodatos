@@ -81,7 +81,7 @@ Este repositorio contiene los entregables prácticos correspondientes a cada una
     - Spano, Marcelo (materia completa).
 
 ## **Mentoria07**
-### ** Cambio climático y ML: cómo mitigar las emisiones de CO2 mediante la reducción del consumo energético en construcciones edilicias **
+### **Cambio climático y ML: cómo mitigar las emisiones de CO2 mediante la reducción del consumo energético en construcciones edilicias**
 
 - **Mentora:**
     - [Tamara Maggioni](www.linkedin.com/in/tam-maggio)
@@ -90,10 +90,4 @@ En este proyecto se propone mitigar los efectos del cambio climático mediante e
 
 De esta manera, los agentes gubernamentales, tomadores de decisiones y las empresas constructoras podrían contar con una herramienta basada en ML para elaborar normativas, propuestas y/o acciones tanto preventivas (para nuevas construcciones) como de reacondicionamiento (para viejas construcciones).
 
-**Objetivos propuestos:**
-
-¿Pueden las herramientas del ML y la ciencia de datos ayudar en los esfuerzos de lucha contra el cambio climático?
-¿Es posible construir un modelo (o más de uno) que prediga con un grado aceptable de error el consumo energético de las edificaciones?
-¿Cuáles son las mejores métricas que podemos implementar en un problema de regresión? ¿Porqué?
-¿Cuáles son las variables que más influyen en la emisión de CO2 de las construcciones? ¿las características de las edificaciones o las variables climáticas?
 
