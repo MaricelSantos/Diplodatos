@@ -1,0 +1,3636 @@
+﻿{
+  "paragraphs": [
+    {
+      "text": "print(s\"\"\"%html\n<center>\n    <h1><a href=\"http://diplodatos.famaf.unc.edu.ar/\">Diplomatura en Ciencia de Datos, Aprendizaje Automático y sus Aplicaciones</a></h1>\n    <h2>Curso <a href=\"https://sites.google.com/view/eleccion-optativas-diplodatos/programaci%C3%B3n-distribu%C3%ADda-sobre-grandes-vol%C3%BAmenes-de-datos\">Programación Distribuida sobre Grandes Volúmenes de Datos</a></h2>\n</center>\n\n<br>\n\n<h3 style=\"text-align:center;\"> Damián Barsotti  </h3>\n\n<h3 style=\"text-align:center;\">\n    <a href=\"http://www.famaf.unc.edu.ar\">\n    Facultad de Matemática Astronomía Física y Computación\n    </a>\n<br/>\n    <a href=\"http://www.unc.edu.ar\">\n    Universidad Nacional de Córdoba\n    </a>\n<br/>\n    <center>\n    <a href=\"http://www.famaf.unc.edu.ar\">\n    <img src=\"$baseDir/comun/logo%20UNC%20FAMAF%202016.png\" alt=\"Drawing\" style=\"width:50%;\"/>\n    </a>\n    </center>\n</h3>\n\n<p style=\"font-size:15px;\">\n    <br />\n        This work is licensed under a\n        <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc-sa/4.0/\">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.\n    <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc-sa/4.0/\">\n        <img alt=\"Creative Commons License\" style=\"border-width:0;vertical-align:middle;float:right\" src=\"https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png\" />\n    </a>\n</p>\n\"\"\")\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-09T17:16:59+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala"
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "editorHide": true,
+        "fontSize": 9,
+        "results": {},
+        "enabled": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897969_1290389416",
+      "id": "20171010-191319_1407757246",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:213403"
+    },
+    {
+      "title": "Antes de comenzar",
+      "text": "%md\n### Antes de comenzar\n1. Lanzar terminal\n1. Actualizar repo:\n```sh\ncd diplodatos_bigdata\ngit pull\n```\n1. Lanzar [Zeppelin](http://zeppelin.apache.org/) en docker:\n```sh\n./docker/zeppelin.sh\n```\n1. En navegador abrir [http://localhost:8080](http://localhost:8080)\n1. Seleccionar `Import note`\n1. Elegir json en `diplodatos_bigdata/clases/07_grafos/note.zpln`\n2. Seleccionar `Clase 07 - Grandes Grafos Sociales`\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-08T15:04:57+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "fontSize": 9,
+        "title": false,
+        "results": {},
+        "enabled": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h3>Antes de comenzar</h3>\n<ol>\n<li>Lanzar terminal</li>\n<li>Actualizar repo:</li>\n</ol>\n<pre><code class=\"language-sh\">cd diplodatos_bigdata\ngit pull\n</code></pre>\n<ol>\n<li>Lanzar <a href=\"http://zeppelin.apache.org/\">Zeppelin</a> en docker:</li>\n</ol>\n<pre><code class=\"language-sh\">./docker/zeppelin.sh\n</code></pre>\n<ol>\n<li>En navegador abrir <a href=\"http://localhost:8080\">http://localhost:8080</a></li>\n<li>Seleccionar <code>Import note</code></li>\n<li>Elegir json en <code>diplodatos_bigdata/clases/07_grafos/note.zpln</code></li>\n<li>Seleccionar <code>Clase 07 - Grandes Grafos Sociales</code></li>\n</ol>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897971_1218556066",
+      "id": "20171026-104737_1316799732",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "status": "READY",
+      "$$hashKey": "object:213404"
+    },
+    {
+      "text": "%md\n# Grandes Grafos Sociales",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-08T15:04:57+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "fontSize": 9,
+        "results": {},
+        "enabled": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h1>Grandes Grafos Sociales</h1>\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897971_1959953714",
+      "id": "20171101-121050_1177283744",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "status": "READY",
+      "$$hashKey": "object:213405"
+    },
+    {
+      "text": "%md\n## GraphFrames\n\n* Utiliza la interface Spark SQL (Dataframes).\n* Creada por [Databricks](https://databricks.com/).\n* Por ahora no viene en la distribución estandard de Spark (solo [GraphX](http://spark.apache.org/graphx/) sobre RDD's).\n* Algoritmos ya implementados como: \n    - Breadth-first search (BFS)\n    - Componentes (fuertemente) conexas\n    - Label Propagation Algorithm (para detectar comunidades)\n    - PageRank\n    - Shortest paths\n    - Triangle count.\n* **Agregación de mensajes** para hacer algoritmos.\n* **Motif finding** para queries. \n\n### Documentación:\n\n* [User Guide](https://graphframes.github.io/graphframes/docs/_site/user-guide.html).\n* [User Guide - Python](https://docs.databricks.com/spark/latest/graph-analysis/graphframes/user-guide-python.html).\n* [Documentación de la API](https://graphframes.github.io/graphframes/docs/_site/api/python/index.html).\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-08T15:04:57+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>GraphFrames</h2>\n<ul>\n  <li>Utiliza la interface Spark SQL (Dataframes).</li>\n  <li>Creada por <a href=\"https://databricks.com/\">Databricks</a>.</li>\n  <li>Por ahora no viene en la distribución estandard de Spark (solo <a href=\"http://spark.apache.org/graphx/\">GraphX</a> sobre RDD&rsquo;s).</li>\n  <li>Algoritmos ya implementados como:\n    <ul>\n      <li>Breadth-first search (BFS)</li>\n      <li>Componentes (fuertemente) conexas</li>\n      <li>Label Propagation Algorithm (para detectar comunidades)</li>\n      <li>PageRank</li>\n      <li>Shortest paths</li>\n      <li>Triangle count.</li>\n    </ul>\n  </li>\n  <li><strong>Agregación de mensajes</strong> para hacer algoritmos.</li>\n  <li><strong>Motif finding</strong> para queries.</li>\n</ul>\n<h3>Documentación:</h3>\n<ul>\n  <li><a href=\"https://graphframes.github.io/graphframes/docs/_site/user-guide.html\">User Guide</a>.</li>\n  <li><a href=\"https://docs.databricks.com/spark/latest/graph-analysis/graphframes/user-guide-python.html\">User Guide - Python</a>.</li>\n  <li><a href=\"https://graphframes.github.io/graphframes/docs/_site/api/python/index.html\">Documentación de la API</a>.</li>\n</ul>\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897971_157065235",
+      "id": "20171102-112550_410534992",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "status": "READY",
+      "$$hashKey": "object:213406"
+    },
+    {
+      "text": "%md\n### Creación de grafo\n\n* Se crean a partir de `DataFrame` de aristas y/o vértices.\n* DataFrame de aristas debe tener las columnas `src` y `dst` (por lo menos).\n* DataFrame de vértices debe tener la columna `id` (por lo menos).\n* Los grafos son dirigidos.\n* Se almacenan con redundancia (vertex cut):\n  ![](http://spark.apache.org/docs/latest/img/edge_cut_vs_vertex_cut.png)\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-08T15:04:57+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "fontSize": 9,
+        "results": {},
+        "enabled": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h3>Creación de grafo</h3>\n<ul>\n  <li>Se crean a partir de <code>DataFrame</code> de aristas y/o vértices.</li>\n  <li>DataFrame de aristas debe tener las columnas <code>src</code> y <code>dst</code> (por lo menos).</li>\n  <li>DataFrame de vértices debe tener la columna <code>id</code> (por lo menos).</li>\n  <li>Los grafos son dirigidos.</li>\n  <li>Se almacenan con redundancia (vertex cut):<br/> <img src=\"http://spark.apache.org/docs/latest/img/edge_cut_vs_vertex_cut.png\" /></li>\n</ul>\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897971_1743365280",
+      "id": "20181027-002925_1222103561",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "status": "READY",
+      "$$hashKey": "object:213407"
+    },
+    {
+      "text": "%md\n### Veamos un ejemplo:\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-08T15:04:57+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h3>Veamos un ejemplo:</h3>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897972_43207729",
+      "id": "20201030-111511_962191836",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "status": "READY",
+      "$$hashKey": "object:213408"
+    },
+    {
+      "text": "%pyspark\n\nfrom graphframes import *\n\n# DataFrame de vértices\nv = spark.createDataFrame([\n  (\"a\", \"Alice\", 34),\n  (\"b\", \"Bob\", 36),\n  (\"c\", \"Charlie\", 30),\n  (\"d\", \"David\", 29),\n  (\"e\", \"Esther\", 32),\n  (\"f\", \"Fanny\", 36),\n  (\"g\", \"Gabby\", 60)\n],[\"id\", \"name\", \"age\"])\n\n# DataFrame de aristas\ne = spark.createDataFrame([\n  (\"a\", \"b\", \"amigo\"),\n  (\"b\", \"c\", \"sigue\"),\n  (\"c\", \"b\", \"sigue\"),\n  (\"f\", \"c\", \"sigue\"),\n  (\"e\", \"f\", \"sigue\"),\n  (\"e\", \"d\", \"amigo\"),\n  (\"d\", \"a\", \"amigo\"),\n  (\"a\", \"e\", \"amigo\"),\n  (\"a\", \"h\", \"amigo\")\n], [\"src\", \"dst\", \"relationship\"])\n\n# Creacion de GraphFrame\ng = GraphFrame(v, e)\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-09T11:41:40+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 14,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897972_79812104",
+      "id": "20181027-003337_2137373030",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "dateStarted": "2023-11-09T11:42:00+0000",
+      "dateFinished": "2023-11-09T11:43:37+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:213409"
+    },
+    {
+      "text": "%pyspark\n\nz.show(g.vertices)\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-09T11:44:28+0000",
+      "progress": 100,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 6,
+        "editorMode": "ace/mode/python",
+        "fontSize": 14,
+        "editorHide": false,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 304,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "id": "string",
+                      "name": "string",
+                      "age": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          },
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "id": "string",
+                      "name": "string",
+                      "age": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "id\tname\tage\na\tAlice\t34\nb\tBob\t36\nc\tCharlie\t30\nd\tDavid\t29\ne\tEsther\t32\nf\tFanny\t36\ng\tGabby\t60\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=128",
+              "$$hashKey": "object:214252"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=129",
+              "$$hashKey": "object:214253"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897972_1885130880",
+      "id": "20181027-004033_1700498403",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "dateStarted": "2023-11-09T11:42:04+0000",
+      "dateFinished": "2023-11-09T11:44:28+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:213410"
+    },
+    {
+      "text": "%pyspark\n\nz.show(g.edges)\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-09T11:41:59+0000",
+      "progress": 100,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 6,
+        "editorMode": "ace/mode/python",
+        "fontSize": 14,
+        "editorHide": false,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 356,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "src": "string",
+                      "dst": "string",
+                      "relationship": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "src\tdst\trelationship\na\tb\tamigo\nb\tc\tsigue\nc\tb\tsigue\nf\tc\tsigue\ne\tf\tsigue\ne\td\tamigo\nd\ta\tamigo\na\te\tamigo\na\th\tamigo\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=130",
+              "$$hashKey": "object:214291"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=131",
+              "$$hashKey": "object:214292"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897973_1110162817",
+      "id": "20181027-004041_1915960464",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "dateStarted": "2023-11-09T11:43:38+0000",
+      "dateFinished": "2023-11-09T11:44:40+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:213411"
+    },
+    {
+      "text": "%pyspark\n\n# Query: Get in-degree of each vertex.\nz.show(g.inDegrees)\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-09T11:42:00+0000",
+      "progress": 94,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 6,
+        "editorMode": "ace/mode/python",
+        "fontSize": 14,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "id": "string",
+                      "inDegree": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          },
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "id": "string",
+                      "inDegree": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "id\tinDegree\nf\t1\ne\t1\nh\t1\nd\t1\nc\t2\nb\t2\na\t1\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=132",
+              "$$hashKey": "object:214330"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=133",
+              "$$hashKey": "object:214331"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=134",
+              "$$hashKey": "object:214332"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=135",
+              "$$hashKey": "object:214333"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=136",
+              "$$hashKey": "object:214334"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897973_670561324",
+      "id": "20191205-202553_1454342767",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "dateStarted": "2023-11-09T11:44:28+0000",
+      "dateFinished": "2023-11-09T11:45:19+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:213412"
+    },
+    {
+      "text": "%pyspark\n\n\n# Query: Count the number of \"follow\" connections in the graph.\n\nprint(\"Cantidad de amistades:\", \n        g.edges.filter(\"relationship = 'amigo'\").count())\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-09T11:42:01+0000",
+      "progress": 40,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 6,
+        "editorMode": "ace/mode/python",
+        "fontSize": 14,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Cantidad de amistades: 5\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=137",
+              "$$hashKey": "object:214359"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897973_808765546",
+      "id": "20191205-202527_215305701",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "dateStarted": "2023-11-09T11:44:45+0000",
+      "dateFinished": "2023-11-09T11:45:26+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:213413"
+    },
+    {
+      "text": "%md\n### PageRank\n\n#### Se calcula el Page Rank de cada página: $$PR(p_i) = \\frac{\\epsilon}{N} + (1-\\epsilon) \\sum_{p_j \\in M(p_i)} \\frac{PR (p_j)}{L(p_j)}$$\n* donde \\\\(N\\\\) es la cantidad de paginas, \n* \\\\(\\epsilon\\\\) es la probabilidad de quedarse en la pagina (*reset probability*), \n* \\\\(M(p_i)\\\\) son las páginas que apuntan a \\\\(p_i\\\\) y \n* \\\\(L(p_j)\\\\) es la cantidad e links de la página \\\\(p_j\\\\).\n\n\n![](https://bitbucket.org/bigdata_famaf/diplodatos_bigdata/raw/HEAD/clases/00_introduccion/page_rank.png)\n\n\nMás info en [PageRank](https://es.wikipedia.org/wiki/PageRank).",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-08T15:04:57+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h3>PageRank</h3>\n<h4>Se calcula el Page Rank de cada página: $$PR(p_i) = \\frac{\\epsilon}{N} + (1-\\epsilon) \\sum_{p_j \\in M(p_i)} \\frac{PR (p_j)}{L(p_j)}$$</h4>\n<ul>\n<li>donde \\(N\\) es la cantidad de paginas,</li>\n<li>\\(\\epsilon\\) es la probabilidad de quedarse en la pagina (<em>reset probability</em>),</li>\n<li>\\(M(p_i)\\) son las páginas que apuntan a \\(p_i\\) y</li>\n<li>\\(L(p_j)\\) es la cantidad e links de la página \\(p_j\\).</li>\n</ul>\n<p><img src=\"https://bitbucket.org/bigdata_famaf/diplodatos_bigdata/raw/HEAD/clases/00_introduccion/page_rank.png\" alt=\"\" /></p>\n<p>Más info en <a href=\"https://es.wikipedia.org/wiki/PageRank\">PageRank</a>.</p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897973_1344379080",
+      "id": "paragraph_1634844119648_1955861883",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "status": "READY",
+      "$$hashKey": "object:213414"
+    },
+    {
+      "title": "PageRank",
+      "text": "%pyspark\n\n# Run PageRank algorithm, and show results.\nresults = g.pageRank(resetProbability=0.01, maxIter=10)\n\nz.show(results.vertices.select(\"id\", \"pagerank\"))\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-09T11:42:02+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 14,
+        "title": false,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {
+                    "columns": [
+                      {
+                        "name": "id",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "pagerank",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {
+                          "priority": 0,
+                          "direction": "desc"
+                        },
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      }
+                    ],
+                    "scrollFocus": {},
+                    "selection": [],
+                    "grouping": {
+                      "grouping": [],
+                      "aggregations": [],
+                      "rowExpandedStates": {}
+                    },
+                    "treeView": {},
+                    "pagination": {
+                      "paginationCurrentPage": 1,
+                      "paginationPageSize": 250
+                    }
+                  },
+                  "tableColumnTypeState": {
+                    "names": {
+                      "id": "string",
+                      "pagerank": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          },
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "id": "string",
+                      "pagerank": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "id\tpagerank\ng\t0.011647254575707162\nb\t3.6199424699159937\ne\t0.03848486478566412\na\t0.05421739436354941\nf\t0.0347707909956736\nd\t0.0347707909956736\nc\t3.206166434367738\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=138",
+              "$$hashKey": "object:214407"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=139",
+              "$$hashKey": "object:214408"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=140",
+              "$$hashKey": "object:214409"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=141",
+              "$$hashKey": "object:214410"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=142",
+              "$$hashKey": "object:214411"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=143",
+              "$$hashKey": "object:214412"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=144",
+              "$$hashKey": "object:214413"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=145",
+              "$$hashKey": "object:214414"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=146",
+              "$$hashKey": "object:214415"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=147",
+              "$$hashKey": "object:214416"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=148",
+              "$$hashKey": "object:214417"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=149",
+              "$$hashKey": "object:214418"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=150",
+              "$$hashKey": "object:214419"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=151",
+              "$$hashKey": "object:214420"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=152",
+              "$$hashKey": "object:214421"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=153",
+              "$$hashKey": "object:214422"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=154",
+              "$$hashKey": "object:214423"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=155",
+              "$$hashKey": "object:214424"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=156",
+              "$$hashKey": "object:214425"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897973_914175379",
+      "id": "20191205-202719_809801770",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "dateStarted": "2023-11-09T11:45:20+0000",
+      "dateFinished": "2023-11-09T11:52:27+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:213415"
+    },
+    {
+      "title": "Guardemos el grafo",
+      "text": "%pyspark\nfrom pyspark.sql.functions import col\n\ng.edges.printSchema()\n\ng.edges \\\n        .select(col(\"src\").alias(\"Source\"), \n                col(\"dst\").alias(\"Target\"), \n                \"relationship\") \\\n        .coalesce(1) \\\n        .write \\\n        .csv(\"g_edges.csv\", mode=\"overwrite\", header=True)\n\n# Ver que pasa sin coalesce",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-09T11:42:02+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 14,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- src: string (nullable = true)\n |-- dst: string (nullable = true)\n |-- relationship: string (nullable = true)\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=157",
+              "$$hashKey": "object:214478"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897973_2046386786",
+      "id": "20201029-163912_1652236873",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "dateStarted": "2023-11-09T11:45:26+0000",
+      "dateFinished": "2023-11-09T11:52:34+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:213416"
+    },
+    {
+      "text": "%md\n## Ejemplo Red de Usuarios Twitter",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-08T15:04:57+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "fontSize": 9,
+        "results": {},
+        "enabled": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Ejemplo Red de Usuarios Twitter</h2>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897973_873637790",
+      "id": "20181024-105040_178046617",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "status": "READY",
+      "$$hashKey": "object:213417"
+    },
+    {
+      "title": "Load Tweets",
+      "text": "%pyspark\n\ntweets = spark.read.parquet(\"../../diplodatos_bigdata/ds/tweets.pqt\")\n\nprint(\"Cantidad de tweets:\", tweets.count())\n\nz.show(tweets.limit(10))\n# RT_times es la cantidad de veces que el usuario retweeteo el tweet\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-09T14:39:08+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 14,
+        "title": true,
+        "results": {
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "timestamp": "string",
+                      "user": "string",
+                      "RT_by": "string",
+                      "RT_times": "string",
+                      "text": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Cantidad de tweets: 172040\n\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "timestamp\tuser\tRT_by\tRT_times\ttext\n1487970896\tierrejon\tteresapititesa\t2\tRT @ierrejon: Aulas masificadas, falta de profesorado, precariedad laboral para docentes... ¿Así pretende el PP garantizar el fut…\n1487971010\tRobiBaradel\titoferrero\t1\tRT @RobiBaradel: Nos parece muy sano que los ciudadanos sumen su tiempo y su compromiso a la Educación Pública, los esperamos todo e…\n1487971052\tvilma_ripoll\tPabloIannuzzi\t3\tRT @vilma_ripoll: Los \"voluntarios\"contra el paro docente, son carneros. Los docentes defienden su salario y la escuela pública. Apoyemos e…\n1487971121\tfargosi\tPiaAsao\t3\tRT @fargosi: Hay otros medios de protesta. Las huelgas docentes son inconstitucionales por las convenciones de Derechos del Niño. Jueces, a…\n1487971177\tGFrondizi\ttepergmailcomP1\t3\tRT @GFrondizi: Pido algún fiscal por incumplimiento del deber de educar a los niños de la nación Pena con cárcel p baradel Exijo q…\n1487971184\tRobiBaradel\tAnaliavc1\t41\tRT @RobiBaradel: Nos parece muy sano que los ciudadanos sumen su tiempo y su compromiso a la Educación Pública, los esperamos todo e…\n1487971345\tSuperSecretario\tari2271\t12\tRT @SuperSecretario: #Cambiemos sacó solo 1,5% pq en su spot no prometió Voluntarios para reemplazar Docentes. Si se avivaban arrasaban!  h…\n1487971368\tMarinaVolpe12\tBocaLocura312\t1\tRT @MarinaVolpe12: No se ofrezcan nunca como Médicos voluntarios.Si hacen como MM, te saca el hígado y pide disculpas xq se equivovó #Volun…\n1487971408\tlanacionmas\tsusanamartimari\t2\tRT @lanacionmas: ¿Qué opinás de la propuesta #VoluntarioDocenteNoAlParo que se generó en las redes sociales a partir del paro nacional? #La…\n1487971469\taeronauticosCFK\tandrea7533\t17\tRT @aeronauticosCFK: #ApoyoALosMaestros Para estas cosas sobra la guita. Son patéticos https://t.co/6BW6eGZYpT\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=258",
+              "$$hashKey": "object:214531"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=259",
+              "$$hashKey": "object:214532"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=260",
+              "$$hashKey": "object:214533"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897973_306061665",
+      "id": "20171101-124010_495006264",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "dateStarted": "2023-11-09T14:39:08+0000",
+      "dateFinished": "2023-11-09T14:39:16+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:213418"
+    },
+    {
+      "text": "%md\n### Definición de la red de usuarios:\n\n* Queremos que un **usuario A esté conectado a usuario B** si A retweeteó algún mensaje de B.\n    - Relación **A** *\"sigue a\"* **B**.\n* Queremos también la cantidad de retweets que hizo B de mensajes de A **distintos o no**.",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-08T15:04:57+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "fontSize": 9,
+        "results": {},
+        "enabled": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h3>Definición de la red de usuarios:</h3>\n<ul>\n<li>Queremos que un <strong>usuario A esté conectado a usuario B</strong> si A retweeteó algún mensaje de B.\n<ul>\n<li>Relación <strong>A</strong> <em>&ldquo;sigue a&rdquo;</em> <strong>B</strong>.</li>\n</ul>\n</li>\n<li>Queremos también la cantidad de retweets que hizo B de mensajes de A <strong>distintos o no</strong>.</li>\n</ul>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897973_1408184325",
+      "id": "20181024-111922_1953182558",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "status": "READY",
+      "$$hashKey": "object:213419"
+    },
+    {
+      "title": "Generamos las conecciones por usuarios",
+      "text": "%pyspark\n\nfrom pyspark.sql.functions import sum, count\n\ntwitterConnections = tweets \\\n                        .groupBy(\"user\", \"RT_by\") \\\n                        .agg(sum(\"RT_times\").alias(\"count_RT\"), count(\"*\").alias(\"count_distinct_RT\"))\n\nprint(\"Cantidad de conecciones:\", twitterConnections.count())\n\nz.show(twitterConnections.limit(20))\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-09T14:39:11+0000",
+      "progress": 40,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 14,
+        "title": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "user": "string",
+                      "RT_by": "string",
+                      "count_RT": "string",
+                      "count_distinct_RT": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          },
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "user": "string",
+                      "RT_by": "string",
+                      "count_RT": "string",
+                      "count_distinct_RT": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Cantidad de conecciones: 152613\n\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "user\tRT_by\tcount_RT\tcount_distinct_RT\nWolffWaldo\txenia43sailor\t69\t1\natlanticsurff\tpaulobeni\t8\t1\nRuben_Rischmann\tPPperonoelsapo\t23\t1\nWolffWaldo\tMariePes72\t14\t1\nromerodiario\tRcaRawson\t4\t1\npablen2012\tNattyJuliAle\t4\t1\nMaestroPortenio\tsamuelevyARG\t14\t1\nLaAlfareraOk\taka_Mister\t33\t1\nertenembaum\tfertso\t4\t1\nBrujaUniversal\tO_Fer_\t6\t1\nmis2centavos\tmapolo1978\t2\t1\nlucaslauriente\t_Felpa_\t1\t1\nPajaritaTW\toscarcapellini\t6\t1\nArgentinaSoy1\t88lamaga\t82\t1\nel_telegrafo\tamaia78\t1\t1\nDEM___\taquisiclaudia\t79\t1\nLauraadri\tarturomakko\t12\t1\nscorohernan\tgustavospektor\t6\t1\nCondenaNacional\tSyl_Vicious\t3\t1\nhanalfabeto\tOsvaM55\t18\t2\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=261",
+              "$$hashKey": "object:214590"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=262",
+              "$$hashKey": "object:214591"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897974_108078529",
+      "id": "20171101-121958_1394663112",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "dateStarted": "2023-11-09T14:39:11+0000",
+      "dateFinished": "2023-11-09T14:39:30+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:213420"
+    },
+    {
+      "title": "Hay que renombrar las conexiones de tweeter:",
+      "text": "%pyspark\n\nfrom pyspark.sql.functions import col\n\nedgesDF = twitterConnections \\\n    .select(col(\"RT_by\").alias(\"src\"),\n            col(\"user\").alias(\"dst\"),\n            \"count_RT\", \"count_distinct_RT\")\n                                       \nz.show(edgesDF.limit(10))\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-09T14:39:16+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 6,
+        "editorMode": "ace/mode/python",
+        "fontSize": 14,
+        "editorHide": false,
+        "title": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "src": "string",
+                      "dst": "string",
+                      "count_RT": "string",
+                      "count_distinct_RT": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "src\tdst\tcount_RT\tcount_distinct_RT\nxenia43sailor\tWolffWaldo\t69\t1\npaulobeni\tatlanticsurff\t8\t1\nPPperonoelsapo\tRuben_Rischmann\t23\t1\nMariePes72\tWolffWaldo\t14\t1\nRcaRawson\tromerodiario\t4\t1\nNattyJuliAle\tpablen2012\t4\t1\nsamuelevyARG\tMaestroPortenio\t14\t1\naka_Mister\tLaAlfareraOk\t33\t1\nfertso\tertenembaum\t4\t1\nO_Fer_\tBrujaUniversal\t6\t1\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=263",
+              "$$hashKey": "object:214629"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897974_1928387854",
+      "id": "20171101-124136_101875926",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "dateStarted": "2023-11-09T14:39:17+0000",
+      "dateFinished": "2023-11-09T14:39:32+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:213421"
+    },
+    {
+      "title": "Hay que crear el DF de vértices",
+      "text": "%pyspark\n\nsrcs = edgesDF.select(col(\"src\").alias(\"id\"))\n\ndsts = edgesDF.select(col(\"dst\").alias(\"id\"))\n    \nvertexDF = srcs.unionAll(dsts).distinct()\n\nz.show(vertexDF.limit(10))\n    ",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-09T14:39:18+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 6,
+        "editorMode": "ace/mode/python",
+        "fontSize": 14,
+        "title": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "id": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "id\nOsvaM55\nyhernandez63\nrozerosas\nLotoOmar\nRutLecour\nGabyEnlaLuna\nyonoevadi8000\nfefo41_marcelo\nLuciano2129\nAVEFENIX20371\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=264",
+              "$$hashKey": "object:214665"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897974_931203992",
+      "id": "20191206-163757_2138250663",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "dateStarted": "2023-11-09T14:39:30+0000",
+      "dateFinished": "2023-11-09T14:39:34+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:213422"
+    },
+    {
+      "title": "Creación de GraphFrame:",
+      "text": "%pyspark\n\nfrom graphframes import *\n\nc = GraphFrame(vertexDF, edgesDF).cache()\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-09T14:39:22+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 14,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897974_738031954",
+      "id": "20171101-124739_82230555",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "dateStarted": "2023-11-09T14:39:33+0000",
+      "dateFinished": "2023-11-09T14:39:36+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:213423"
+    },
+    {
+      "text": "%md\n### Operaciones básicas sobre grafos\n\n#### A continuación veremos como calcular: \n* la cantidad de vértices (usuarios)\n* la cantidad de arístas (conexiones)\n* el grado de cada vértice (cantidad de conexiones por usuario)",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-08T15:04:57+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "fontSize": 9,
+        "results": {},
+        "enabled": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h3>Operaciones básicas sobre grafos</h3>\n<h4>A continuación veremos como calcular:</h4>\n<ul>\n  <li>la cantidad de vértices (usuarios)</li>\n  <li>la cantidad de arístas (conexiones)</li>\n  <li>el grado de cada vértice (cantidad de conexiones por usuario)</li>\n</ul>\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897974_506304894",
+      "id": "20171102-153102_880120870",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "status": "READY",
+      "$$hashKey": "object:213424"
+    },
+    {
+      "title": "Tamaño del grafo",
+      "text": "%pyspark\n\nverticesCount = graph.vertices.count()\n\nedgesCount = graph.edges.count()\n\nprint(f\"\"\"%table\nCantidad de usuarios \\t Cantidad de conecciones\n{verticesCount} \\t {edgesCount}\"\"\")\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-09T11:42:27+0000",
+      "progress": 88,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 14,
+        "title": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "Cantidad de usuarios ": "string",
+                      " Cantidad de conecciones": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "Cantidad de usuarios \t Cantidad de conecciones\n57138 \t 152613\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=165",
+              "$$hashKey": "object:214722"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=166",
+              "$$hashKey": "object:214723"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897974_1662424171",
+      "id": "20171101-124845_773490911",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "dateStarted": "2023-11-09T11:53:12+0000",
+      "dateFinished": "2023-11-09T11:53:20+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:213425"
+    },
+    {
+      "title": "Cantidad de conecciones por usuario",
+      "text": "%pyspark\n\nnodesDegree = graph.degrees\n\nsortedByDegree = nodesDegree.orderBy(\"degree\", ascending=False)\n\nz.show(sortedByDegree.limit(10))\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-09T11:42:38+0000",
+      "progress": 94,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 14,
+        "title": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "id": "string",
+                      "degree": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "id\tdegree\nWinston_Dunhill\t2325\nfernandocarnota\t1745\nsantosjorgeh\t1657\nlanatoparatodos\t1529\nJorgeFavaloro\t1483\nRobiBaradel\t1483\nelcoya1977\t1471\neldestapeweb\t1441\nlucaslauriente\t1422\nbetovaldez\t1407\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=167",
+              "$$hashKey": "object:214761"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897974_631857429",
+      "id": "20171102-131720_1147432214",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "dateStarted": "2023-11-09T11:53:13+0000",
+      "dateFinished": "2023-11-09T11:53:41+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:213426"
+    },
+    {
+      "text": "%md\n\n## Ejemplo Agregación de Mensajes\n\n### Influencia Colectiva\n\n#### Aplicaciones: \n* Marketing viral (influencia de opinión)\n* Detección de focos de dispersión de enfermedades\n* ...\n\n#### Cómo funciona:\n* Primero se calcula la **Influencia Colectiva (CI)**\n* En cada iteración elimina del grafo el nodo de mayor CI y recalcula el CI de los nodos restantes\n* Termina cuando la componente gigante se destruye\n* Solución básica: \\\\(O(N2)\\\\). Optimizada: \\\\(O(NlogN)\\\\)\n\n> Influence maximization in complex networks through optimal percolation” (Flaviano Morone, Hernán A. Makse, 27 Jun 2015) https://arxiv.org/abs/1506.08326\n\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-08T15:04:57+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "fontSize": 9,
+        "results": {},
+        "enabled": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Ejemplo Agregación de Mensajes</h2>\n<h3>Influencia Colectiva</h3>\n<h4>Aplicaciones:</h4>\n<ul>\n  <li>Marketing viral (influencia de opinión)</li>\n  <li>Detección de focos de dispersión de enfermedades</li>\n  <li>&hellip;</li>\n</ul>\n<h4>Cómo funciona:</h4>\n<ul>\n  <li>Primero se calcula la <strong>Influencia Colectiva (CI)</strong></li>\n  <li>En cada iteración elimina del grafo el nodo de mayor CI y recalcula el CI de los nodos restantes</li>\n  <li>Termina cuando la componente gigante se destruye</li>\n  <li>Solución básica: \\(O(N2)\\). Optimizada: \\(O(NlogN)\\)</li>\n</ul>\n<blockquote>\n  <p>Influence maximization in complex networks through optimal percolation” (Flaviano Morone, Hernán A. Makse, 27 Jun 2015) <a href=\"https://arxiv.org/abs/1506.08326\">https://arxiv.org/abs/1506.08326</a></p>\n</blockquote>\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897974_2014470522",
+      "id": "20171102-132006_1774167041",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "status": "READY",
+      "$$hashKey": "object:213427"
+    },
+    {
+      "text": "%md\n### Fórmula de CI\n\nLa formula de collective influence para un vértice \\\\(i\\\\) es:\n\n$$ CI(i) = (degree_i -  1) \\times \\sum\\limits_{j \\in vecinos(i)} (degree_j -  1)$$\n\nSe supone un grafo **no dirigido**.\n\n### Pasos para calcular collective influence son:\n\n* agregar el grado (degree) de cada nodo al grafo.\n* importar `AggregateMessages`.\n* calcular collective influence de cada individuo usando `AggregateMessages` de `GraphFrame`\n* ordenar los individuos por su collective influence de mayor a menor\n* imprimir el listado de individuos\n\n\n#### Documentación para implementar con GraphFrames:\n\n* Documentación sobre [AggregateMessages](https://graphframes.github.io/graphframes/docs/_site/user-guide.html#message-passing-via-aggregatemessages) con ejemplo.\n* Documentación de [API AggregateMessages](https://graphframes.github.io/graphframes/docs/_site/api/python/graphframes.html).\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-08T15:04:57+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "fontSize": 9,
+        "results": {},
+        "enabled": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h3>Fórmula de CI</h3>\n<p>La formula de collective influence para un vértice \\(i\\) es:</p>\n<p>$$ CI(i) = (degree_i - 1) \\times \\sum\\limits_{j \\in vecinos(i)} (degree_j - 1)$$</p>\n<p>Se supone un grafo <strong>no dirigido</strong>.</p>\n<h3>Pasos para calcular collective influence son:</h3>\n<ul>\n  <li>agregar el grado (degree) de cada nodo al grafo.</li>\n  <li>importar <code>AggregateMessages</code>.</li>\n  <li>calcular collective influence de cada individuo usando <code>AggregateMessages</code> de <code>GraphFrame</code></li>\n  <li>ordenar los individuos por su collective influence de mayor a menor</li>\n  <li>imprimir el listado de individuos</li>\n</ul>\n<h4>Documentación para implementar con GraphFrames:</h4>\n<ul>\n  <li>Documentación sobre <a href=\"https://graphframes.github.io/graphframes/docs/_site/user-guide.html#message-passing-via-aggregatemessages\">AggregateMessages</a> con ejemplo.</li>\n  <li>Documentación de <a href=\"https://graphframes.github.io/graphframes/docs/_site/api/python/graphframes.html\">API AggregateMessages</a>.</li>\n</ul>\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897975_902380048",
+      "id": "20171102-131904_821311339",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "status": "READY",
+      "$$hashKey": "object:213428"
+    },
+    {
+      "text": "%pyspark\n\nfrom pyspark.sql.functions import sum\nfrom graphframes.lib import AggregateMessages as AM\n\n#Creo un nuevo grafo con los nodos y su degree (disponible en nodesDegree) y las aristas originales\ndegreeGraph = GraphFrame(nodesDegree, graph.edges )\n# Aristas y vértices están bien particionadas\n\n\n# Comenzamos a calcular CI \n\n# Cada nodo envia su degree-1 a sus vecinos a traves de sus conecciones salientes y entrantes\nmsgToDst = AM.src[\"degree\"] - 1\nmsgToSrc = AM.dst[\"degree\"] - 1\n\n# El DataFrame sumNeighborDegrees debe tener 2 columnas: id del nodo y sum_neighbor_degree \nsumNeighborDegrees = degreeGraph.aggregateMessages(\n    sum(AM.msg).alias(\"sum_neighbor_degree\"), # Hace aggregation en cada nodo sobre los mensages recibidos \n    sendToDst=msgToDst, # Envia a vecino por coneccion saliente\n    sendToSrc=msgToSrc) # Envia a vecino por coneccion entrante\n\n\n# Join de sumNeighborDegrees con degrees para tener todas las columnas necesarias para calcular CI.\n\nnodesDegreeJoin = nodesDegree.join(sumNeighborDegrees,\"id\")\n\n# Calculamos CI: para terminar de calcularlo debemos multiplicar la sumatoria del paso anterior por degree - 1 de cada nodo.\n# El DataFrame collectiveInfluence debe tener 3 columnas: id, ci y degree\n# Por ultimo ordena descendentemente por ci \n\ncollectiveInfluence = nodesDegreeJoin \\\n                          .select( ((col(\"degree\") - 1) * col(\"sum_neighbor_degree\")).alias(\"ci\"), \n                                    \"id\", \n                                    \"degree\") \\\n                          .orderBy(\"ci\", ascending=False) \\\n                          .cache()\n\nz.show(collectiveInfluence.limit(20))\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-09T11:42:44+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 14,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "ci": "string",
+                      "id": "string",
+                      "degree": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "ci\tid\tdegree\n71551312\tWinston_Dunhill\t2325\n57822552\tsantosjorgeh\t1657\n55026688\tfernandocarnota\t1745\n45848634\tJorgeFavaloro\t1483\n42052088\tlanatoparatodos\t1529\n37856910\telcoya1977\t1471\n33925374\tbetovaldez\t1407\n31175045\tLaBelgrana\t606\n30129480\tfargosi\t1271\n29494764\tRobiBaradel\t1483\n27043120\tcopi__\t1041\n23379462\tNunkMasKs\t1027\n18770024\tConCiencia2015\t533\n17316472\tWolffWaldo\t812\n16165470\tHugoYasky\t987\n15975882\tmis2centavos\t1020\n15693120\teldestapeweb\t1441\n15118908\tCarlos_AD_Viola\t533\n14284499\tCTAok\t830\n14149350\tEdgardoRovira\t1176\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=168",
+              "$$hashKey": "object:214821"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897975_1966434133",
+      "id": "20171101-125025_1054455316",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "dateStarted": "2023-11-09T11:53:20+0000",
+      "dateFinished": "2023-11-09T11:53:44+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:213429"
+    },
+    {
+      "text": "%md\n## Motif Finding\n\n* Es un Domain-Specific Language (DSL) para expresar queries.\n* La unidad básica es la expresión de una arista\n\n### Ejemplos\n\n* `graph.find(\"(a)-[e]->(b); (b)-[e2]->(a)\")` expresa vértices unidos en ambas direcciones.\n    - Devuelve un DataFrame con columnas `\"a\"`, `\"b\"`, `\"e\"` y `\"e2\"`.\n* `graph.find(\"(a)-[e]->(b); (b)-[e2]->(c)\")` expresa dos aristas pegadas con un vértice común `b`. \n\n### Documentacion y ejemplo\n\n* [GraphFrame User Guide](https://graphframes.github.io/graphframes/docs/_site/user-guide.html#motif-finding).\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-08T15:04:57+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "fontSize": 9,
+        "results": {},
+        "enabled": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Motif Finding</h2>\n<ul>\n  <li>Es un Domain-Specific Language (DSL) para expresar queries.</li>\n  <li>La unidad básica es la expresión de una arista</li>\n</ul>\n<h3>Ejemplos</h3>\n<ul>\n  <li><code>graph.find(&quot;(a)-[e]-&gt;(b); (b)-[e2]-&gt;(a)&quot;)</code> expresa vértices unidos en ambas direcciones.\n    <ul>\n      <li>Devuelve un DataFrame con columnas <code>&quot;a&quot;</code>, <code>&quot;b&quot;</code>, <code>&quot;e&quot;</code> y <code>&quot;e2&quot;</code>.</li>\n    </ul>\n  </li>\n  <li><code>graph.find(&quot;(a)-[e]-&gt;(b); (b)-[e2]-&gt;(c)&quot;)</code> expresa dos aristas pegadas con un vértice común <code>b</code>.</li>\n</ul>\n<h3>Documentacion y ejemplo</h3>\n<ul>\n  <li><a href=\"https://graphframes.github.io/graphframes/docs/_site/user-guide.html#motif-finding\">GraphFrame User Guide</a>.</li>\n</ul>\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897975_1539654966",
+      "id": "20181027-013740_419047675",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "status": "READY",
+      "$$hashKey": "object:213430"
+    },
+    {
+      "text": "%md\n### Recordemos el grafo",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-08T15:04:57+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h3>Recordemos el grafo</h3>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897975_1733001468",
+      "id": "paragraph_1634934672760_445886262",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "status": "READY",
+      "$$hashKey": "object:213431"
+    },
+    {
+      "text": "%pyspark\nz.show(g.vertices)",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-09T11:42:52+0000",
+      "progress": 33,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 6,
+        "editorMode": "ace/mode/python",
+        "fontSize": 14,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "id": "string",
+                      "name": "string",
+                      "age": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "id\tname\tage\na\tAlice\t34\nb\tBob\t36\nc\tCharlie\t30\nd\tDavid\t29\ne\tEsther\t32\nf\tFanny\t36\ng\tGabby\t60\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=169",
+              "$$hashKey": "object:214881"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=170",
+              "$$hashKey": "object:214882"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897975_1974931027",
+      "id": "paragraph_1634934258381_857174466",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "dateStarted": "2023-11-09T11:53:41+0000",
+      "dateFinished": "2023-11-09T11:53:46+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:213432"
+    },
+    {
+      "text": "%pyspark\nz.show(g.edges)",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-09T11:42:54+0000",
+      "progress": 100,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 6,
+        "editorMode": "ace/mode/python",
+        "fontSize": 14,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "src": "string",
+                      "dst": "string",
+                      "relationship": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "src\tdst\trelationship\na\tb\tamigo\nb\tc\tsigue\nc\tb\tsigue\nf\tc\tsigue\ne\tf\tsigue\ne\td\tamigo\nd\ta\tamigo\na\te\tamigo\na\th\tamigo\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=171",
+              "$$hashKey": "object:214920"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=172",
+              "$$hashKey": "object:214921"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897975_1809102299",
+      "id": "paragraph_1634934349934_2020230166",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "dateStarted": "2023-11-09T11:53:44+0000",
+      "dateFinished": "2023-11-09T11:53:48+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:213433"
+    },
+    {
+      "text": "%md\n### Hagamos algunos queries",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-08T15:04:57+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h3>Hagamos algunos queries</h3>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897975_1083336612",
+      "id": "paragraph_1634934687488_918172403",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "status": "READY",
+      "$$hashKey": "object:213434"
+    },
+    {
+      "text": "%pyspark\n\n# Buscar pares de vértices en ambas direccione:\nmotifs = g.find(\"(a)-[e1]->(b); (b)-[e2]->(a)\")\n\nmotifs.printSchema()\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-08T15:09:45+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 6,
+        "editorMode": "ace/mode/python",
+        "fontSize": 14,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- a: struct (nullable = false)\n |    |-- id: string (nullable = true)\n |    |-- name: string (nullable = true)\n |    |-- age: long (nullable = true)\n |-- e1: struct (nullable = false)\n |    |-- src: string (nullable = true)\n |    |-- dst: string (nullable = true)\n |    |-- relationship: string (nullable = true)\n |-- b: struct (nullable = false)\n |    |-- id: string (nullable = true)\n |    |-- name: string (nullable = true)\n |    |-- age: long (nullable = true)\n |-- e2: struct (nullable = false)\n |    |-- src: string (nullable = true)\n |    |-- dst: string (nullable = true)\n |    |-- relationship: string (nullable = true)\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897975_2006349062",
+      "id": "20181027-015100_1394496292",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "dateStarted": "2023-11-08T15:17:15+0000",
+      "dateFinished": "2023-11-08T15:17:17+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:213435"
+    },
+    {
+      "text": "%pyspark\n\nz.show(motifs)\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-08T15:09:49+0000",
+      "progress": 15,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 6,
+        "editorMode": "ace/mode/python",
+        "fontSize": 14,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "a": "string",
+                      "e1": "string",
+                      "b": "string",
+                      "e2": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "a\te1\tb\te2\n[c,Charlie,30]\t[c,b,sigue]\t[b,Bob,36]\t[b,c,sigue]\n[b,Bob,36]\t[b,c,sigue]\t[c,Charlie,30]\t[c,b,sigue]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=114",
+              "$$hashKey": "object:214985"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=115",
+              "$$hashKey": "object:214986"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=116",
+              "$$hashKey": "object:214987"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=117",
+              "$$hashKey": "object:214988"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=118",
+              "$$hashKey": "object:214989"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897975_574449346",
+      "id": "20181027-015533_344573808",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "dateStarted": "2023-11-08T15:17:18+0000",
+      "dateFinished": "2023-11-08T15:17:31+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:213436"
+    },
+    {
+      "text": "%pyspark\n# Despues se pueden aplicar filtros para queries mas complejos.\nz.show(motifs.filter(\"b.age > 30\"))\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-09T11:43:04+0000",
+      "progress": 15,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 14,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "a": "string",
+                      "e1": "string",
+                      "b": "string",
+                      "e2": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "a\te1\tb\te2\n[c,Charlie,30]\t[c,b,sigue]\t[b,Bob,36]\t[b,c,sigue]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=173",
+              "$$hashKey": "object:215033"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=174",
+              "$$hashKey": "object:215034"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=175",
+              "$$hashKey": "object:215035"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=176",
+              "$$hashKey": "object:215036"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=177",
+              "$$hashKey": "object:215037"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897975_1506350678",
+      "id": "20201030-112416_1681452862",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "dateStarted": "2023-11-09T11:53:47+0000",
+      "dateFinished": "2023-11-09T11:54:04+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:213437"
+    },
+    {
+      "text": "%md\n## Visualización\n\nA continuación visualizaremos con [Gephi](https://gephi.org/) la parte del grafo (subgrafo) que contiene los mayores influencers.\n\nPara ello generaremos archivos *csv* como entrada de esta herramienta ",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-08T15:04:57+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "fontSize": 9,
+        "results": {},
+        "enabled": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Visualización</h2>\n<p>A continuación visualizaremos con <a href=\"https://gephi.org/\">Gephi</a> la parte del grafo (subgrafo) que contiene los mayores influencers.</p>\n<p>Para ello generaremos archivos <em>csv</em> como entrada de esta herramienta</p>\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897976_303288185",
+      "id": "20171102-160936_360694508",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "status": "READY",
+      "$$hashKey": "object:213438"
+    },
+    {
+      "text": "%pyspark\n\nminCI = 29000000\nminDegree = 600\n\n# tomo los usarios con mayor influencia o con más conecciones\nciTops = collectiveInfluence \\\n    .filter((col(\"ci\") >= minCI) | (col(\"degree\") >= minDegree))\n\ngInfluencers = GraphFrame(ciTops, graph.edges)\n\n# Tomo solo las aristas que tengan vértices\nveTops = gInfluencers.find(\"(a)-[e]->(b)\") \\\n                .cache()\n      \n                \nprint(\"Cantidad de top influencers:\", veTops.count())\n\nveTops.printSchema()\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-09T11:43:09+0000",
+      "progress": 94,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 6,
+        "editorMode": "ace/mode/python",
+        "fontSize": 14,
+        "results": {
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "a": "string",
+                      "e": "string",
+                      "b": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Cantidad de top influencers: 35\nroot\n |-- a: struct (nullable = false)\n |    |-- ci: long (nullable = true)\n |    |-- id: string (nullable = true)\n |    |-- degree: integer (nullable = false)\n |-- e: struct (nullable = false)\n |    |-- src: string (nullable = true)\n |    |-- dst: string (nullable = true)\n |    |-- count_RT: long (nullable = true)\n |    |-- count_distinct_RT: long (nullable = false)\n |-- b: struct (nullable = false)\n |    |-- ci: long (nullable = true)\n |    |-- id: string (nullable = true)\n |    |-- degree: integer (nullable = false)\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=178",
+              "$$hashKey": "object:215074"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897976_254063012",
+      "id": "20171102-000354_1806019706",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "dateStarted": "2023-11-09T11:53:49+0000",
+      "dateFinished": "2023-11-09T11:54:09+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:213439"
+    },
+    {
+      "text": "%pyspark\n\neTops = veTops.select(\"e.*\")\n\neTops.printSchema()\n\n# Grafo de los tops\ngTops = GraphFrame(ciTops, eTops)\n\n\n# guardo un csv con los vertices para Gephi\n# Label es igual a la id\ngTops.vertices \\\n        .select(\"*\", col(\"id\").alias(\"Label\")) \\\n        .coalesce(1) \\\n        .write \\\n        .csv(\"logs/top_influencers.csv\", mode=\"overwrite\", header=True)\n\n# guardo un csv con las aristas para Gephi\ngTops.edges \\\n        .select(col(\"src\").alias(\"Source\"), \n                col(\"dst\").alias(\"Target\"), \n                \"count_RT\",\"count_distinct_RT\") \\\n        .coalesce(1) \\\n        .write \\\n        .csv(\"logs/top_edges.csv\", mode=\"overwrite\", header=True)\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-09T11:43:11+0000",
+      "progress": 20,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 6,
+        "editorMode": "ace/mode/python",
+        "fontSize": 14,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- src: string (nullable = true)\n |-- dst: string (nullable = true)\n |-- count_RT: long (nullable = true)\n |-- count_distinct_RT: long (nullable = false)\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=179",
+              "$$hashKey": "object:215091"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=180",
+              "$$hashKey": "object:215092"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897976_1819286614",
+      "id": "20181027-020144_852191582",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "dateStarted": "2023-11-09T11:54:04+0000",
+      "dateFinished": "2023-11-09T11:54:16+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:213440"
+    },
+    {
+      "text": "%md\n### Gephi\n\nLanzar el programa desde una terminal ejecutando:\n\n```sh\ngephi-0.9.2/bin/gephi\n```\n\nSeguir las instrucciones del profesor.",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-08T15:04:57+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "fontSize": 9,
+        "results": {},
+        "enabled": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h3>Gephi</h3>\n<p>Lanzar el programa desde una terminal ejecutando:</p>\n<pre><code class=\"language-sh\">gephi-0.9.2/bin/gephi\n</code></pre>\n<p>Seguir las instrucciones del profesor.</p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897976_1745294492",
+      "id": "20171102-161414_1207858851",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "status": "READY",
+      "$$hashKey": "object:213441"
+    },
+    {
+      "text": "%md\n### Ejercicio\n\nComplete el siguiente programa para calcular el grafo de todas las conexiones **desde** los 8 mayores influenciadores (influencia colectiva) y graficar el resultado con Gephi. \n\n#### Ayuda\n* Busque en la documentación [Api Datasets](https://spark.apache.org/docs/2.4.8/api/python/pyspark.sql.html#pyspark.sql.DataFrame) algún método que devuelva las *n* primeras files de un Dataset equivalente a la directiva SQL `LIMIT`. \n* Para llenar el comando `find` busque la documentación de [Motif finding](https://graphframes.github.io/graphframes/docs/_site/user-guide.html#motif-finding).\n* Cantidad de vertices = 120, cantidad de aristas = 122.",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-09T17:19:37+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "fontSize": 12,
+        "results": {},
+        "enabled": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897976_2006623198",
+      "id": "20171102-110542_600666434",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:213442"
+    },
+    {
+      "text": "%pyspark\ntopInfluencers = collectiveInfluence.orderBy(\"ci\", ascending=False).limit(8)\ngTops2 = GraphFrame(topInfluencers, graph.edges)\nres1 = gTops2.find(\"(a)-[e]->(b)\")\neTops2 = res1.select(\"e.src\", \"e.dst\")\nvTops2s = eTops2.select(col(\"src\").alias(\"id\"))\nvTops2d = eTops2.select(col(\"dst\").alias(\"id\"))\nvTops2sd = vTops2s.union(vTops2d)\nz.show(collectiveInfluence)\nz.show(topInfluencers)\nz.show(res1)\nz.show(eTops2)\nz.show(vTops2sd)\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-09T17:15:55+0000",
+      "progress": 87,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "ci": "string",
+                      "id": "string",
+                      "degree": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          },
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "ci": "string",
+                      "id": "string",
+                      "degree": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          },
+          "2": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "ci": "string",
+                      "id": "string",
+                      "degree": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          },
+          "3": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "a": "string",
+                      "e": "string",
+                      "b": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          },
+          "4": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "src": "string",
+                      "dst": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          },
+          "5": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "id": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          },
+          "6": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "a": "string",
+                      "e": "string",
+                      "b": "string"
+                    },
+                    "updated": true
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "ci\tid\tdegree\n71551312\tWinston_Dunhill\t2325\n57822552\tsantosjorgeh\t1657\n55026688\tfernandocarnota\t1745\n45848634\tJorgeFavaloro\t1483\n42052088\tlanatoparatodos\t1529\n37856910\telcoya1977\t1471\n33925374\tbetovaldez\t1407\n31175045\tLaBelgrana\t606\n30129480\tfargosi\t1271\n29494764\tRobiBaradel\t1483\n27043120\tcopi__\t1041\n23379462\tNunkMasKs\t1027\n18770024\tConCiencia2015\t533\n17316472\tWolffWaldo\t812\n16165470\tHugoYasky\t987\n15975882\tmis2centavos\t1020\n15693120\teldestapeweb\t1441\n15118908\tCarlos_AD_Viola\t533\n14284499\tCTAok\t830\n14149350\tEdgardoRovira\t1176\n13671789\tatlanticsurff\t942\n13594984\tPochiRafael\t297\n13570825\tedufeiok\t840\n11720226\tJonatanViale\t723\n11047091\tRaulRlmarzetti\t444\n11023299\tSanBravoOk\t334\n10199664\tmartintetaz\t773\n9260920\tinfobae\t681\n9101079\tCFKArgentina\t1162\n9001440\tluispagella\t631\n8994031\tPPTenel13\t594\n8874108\tazulinamorena\t213\n8841476\tGFrondizi\t645\n8618858\tFernandezAnibal\t822\n8123219\tCasaRosadaAR\t744\n7879905\tViviCafferata\t496\n7796439\tdartagio\t190\n7785932\tFragaRosendo\t749\n7208425\tdoctora_pignata\t596\n7179327\tmarianoobarrio\t520\n7136250\tM_Bronenberg\t551\n6501990\ttodonoticias\t628\n6415248\tlizzieyn\t428\n6344632\tArgentinaSoy1\t269\n6207840\tVivianA_Jean\t161\n6188952\tvatica2015\t198\n6037278\tRCachanosky\t494\n5802048\tlapalabraargent\t253\n5516960\tSuperalitita\t146\n5416746\tenrique_altami\t150\n5328324\tPajaritaTW\t567\n5175324\tBeraAlberto2016\t397\n5064984\tjorhurt\t538\n5045535\tPabloLanusse\t496\n4954446\thumano_demasia3\t163\n4871163\tBlackEternidad\t210\n4573476\tDBI1956\t154\n4409928\thanalfabeto\t415\n4395500\tEsterLinaLanzi\t237\n4291207\tlennaargent\t362\n4243840\tjuancristonomo\t305\n4232620\tmavica7\t344\n4231656\tbocabocaok\t133\n4127582\tclarincom\t423\n4073600\tZuliRodriguez\t129\n3896328\tmartascass\t125\n3889277\tmarsell284\t120\n3862800\tsaenzricardo\t401\n3849710\tmariposadefurgo\t123\n3817526\tSilviaDiana1951\t135\n3786426\tpopulismokiller\t372\n3771144\trermultimedia\t352\n3767244\tmarianavogler10\t125\n3522587\t2303guille\t354\n3464493\tvictoriagray107\t318\n3459960\tJofa2010\t316\n3424472\tdebiloto\t143\n3359010\tSmargiassiA\t115\n3346870\tGuilleLobo\t471\n3334230\troberto_10k\t271\n3327950\tAlesMiguens\t203\n3189992\tcliporace\t297\n3118225\tdanielcoccoz\t392\n3097247\tadrianvagnozzi\t324\n3055738\tEMenrath\t99\n3046624\tLaMacrista\t269\n3034800\tSergioOPalazzo\t541\n2990863\tmigeroli\t140\n2975600\tdiogara\t101\n2967154\tAndy4500\t114\n2952439\tkiwiportuario\t198\n2939730\thoteams\t311\n2914574\tAndradaFacu\t339\n2882396\trodolfoCeniz\t437\n2878248\tkukycbj\t173\n2875788\tana_mnaya\t112\n2865875\tcejulito1\t126\n2851024\tElsaKekita\t98\n2838056\t07Bettyna\t105\n2826543\tVbluesciudadano\t160\n2820330\talamidozo\t91\n2792085\tradiomitre\t346\n2789092\tjosefinah05\t110\n2777562\tGustOlmos\t154\n2771496\tfrancozeuss\t105\n2717552\tmendietafirpo\t195\n2709406\tAkainikbel\t99\n2700082\tAnyulina63\t90\n2692096\tOscar87815355\t129\n2650266\tanotherputo_\t919\n2649900\tgabycasti\t293\n2606935\t88lamaga\t116\n2584274\tfilosogogriego\t174\n2527707\tAlfredoDarrigo\t198\n2521376\tTinaBottai15\t153\n2483335\tverdesamuel\t312\n2370511\tkimse1\t144\n2361218\tGracemazzola\t164\n2285539\tNandy46\t312\n2281014\tFrondizista\t160\n2252096\tDamiancan1\t78\n2193480\tlosleucoTN\t271\n2157656\tVHMok\t347\n2062161\tlilianacannavin\t88\n2059464\tgonziver\t265\n2055440\ttrupiaestela\t81\n2014836\teduMAW2013\t77\n2011314\t2016PPT\t304\n1992550\tAntiK_unidos\t351\n1960088\tcyngarciaradio\t377\n1944690\tOshidaKaneko\t84\n1936008\tEsgSilvia\t73\n1935075\tjuanccolombo9\t76\n1930252\tMarceXeneize_\t93\n1924824\tesposito_cre\t70\n1919292\tRaquelRomano9\t250\n1894311\tMisOdios\t328\n1880736\tblerka08\t79\n1873392\tPatriciaWelz\t187\n1865682\tCrisantikukas2\t103\n1827717\tizquierdadiario\t412\n1809159\tJavierAsturia\t74\n1784880\tGracielaJasem\t68\n1770708\tIib10Iris\t83\n1761639\tjlzorzi\t212\n1757964\taloMecha\t178\n1756678\tClau_sias\t120\n1748565\tmotoreco_ok\t184\n1719830\talejandro511955\t71\n1713392\tmordelba\t174\n1704654\tCN24NOTICIAS\t250\n1683000\tTereGar17872180\t73\n1682297\tvictorfyt\t228\n1681652\tMARIO94672054\t204\n1670973\talfrekava\t184\n1659004\tmarceloursino\t333\n1650663\tMissCasata\t442\n1627072\tcarlambrosi\t65\n1626107\tkastymza\t234\n1614498\tcintiaspy\t83\n1594624\tmyacono\t65\n1572056\tvivianasp33\t149\n1559250\tmariancavandoli\t76\n1555224\tIngHarryBosch\t265\n1534099\tCicchittiMonica\t68\n1532176\tAliciaNac\t87\n1526384\tCarlosA14097731\t77\n1525121\tdanythomas15\t68\n1524032\tCeiranoLiliana\t65\n1524024\tArgentina20171\t123\n1518528\tgabicerru\t353\n1503990\tconcemo\t103\n1501608\t4101Olga\t75\n1496232\tmoniksv62\t73\n1491639\tklaw2014\t72\n1490736\talitwitea\t79\n1490047\testefaniacogni2\t62\n1487340\trhodri_banega\t61\n1485990\tantik1100000\t191\n1479996\toscargon270\t253\n1468222\telpayador1\t218\n1461456\tFMLaOportunidad\t109\n1451079\tmartinez56bis\t64\n1448831\tdaniel_oscuro\t74\n1445631\tSariBarcos\t72\n1428986\tTodoCambia8\t62\n1416480\t723MCS\t61\n1404150\tcaloza10\t56\n1403391\tTvoGonzalez\t70\n1398540\tpagina12\t331\n1396655\tLiliRametta\t66\n1387008\tOrwellGeorge\t193\n1374380\tmartabonita\t71\n1366560\tlumage1950\t66\n1364736\tMsIceWomen\t65\n1345086\tJOYASALTAGAMA\t163\n1328490\tRadio10\t291\n1327680\thernanletcher\t289\n1325675\tPiru_laura\t66\n1319752\tmurriza49\t57\n1310259\tsilviaz19\t58\n1300965\tPajara_12\t216\n1297856\taryttit\t57\n1295604\tnachomdeo\t220\n1289960\tolajodida\t57\n1286400\tgiganteMandela\t129\n1282828\tEnOrsai\t285\n1282512\tCuervoAlcira\t57\n1276140\tAmbarj22\t61\n1272798\tgmasf1\t63\n1271232\tbelkis24036550\t73\n1270332\tBetoMeddis\t253\n1256640\tnanaHarta\t85\n1252391\tSusanaBellesi\t62\n1247613\tGregoriodalbon\t290\n1245372\tGorriz70\t60\n1241730\t1534606164ange1\t55\n1241724\tVJotinsky\t70\n1240062\tRipamontiRita\t114\n1239130\tocazadordenoti\t86\n1231140\tSilviaMarquez24\t143\n1229865\tcristinafelgue1\t66\n1228266\twpicatto\t59\n1224160\tmaraluz2015\t141\n1218054\tSurStraub\t90\n1213069\tLuchoPaladini\t500\n1211913\tfergeorgiadis\t52\n1206534\t998ac9f6da78464\t70\n1196000\targentinoFED\t201\n1194160\tirene231313\t56\n1191078\tacmetiny\t55\n1188886\tEquipoEPVS\t138\n1178384\tNikelene\t48\n1176110\tWalterdarioveg3\t66\n1174824\tammi53\t57\n1165162\tCarmenS57428050\t59\n1159710\tJohanaVazquez18\t59\n1155175\tnflores54\t50\n1153140\tJorgeEsteve5\t61\n1152702\tjossephuss\t52\n1151604\tRhiboc\t55\n1141700\tEduardoVenosi\t99\n1136044\t_chiquitaok\t53\n1129750\tazucenabaud\t51\n1127790\thernanpalo\t55\n1123392\tAvefenixenvuelo\t49\n1119775\tFerRaverta\t236\n1114875\tacua_juana\t76\n1110438\tChilbita\t127\n1107630\tlaexgirasoles\t63\n1104374\tSilMercado\t212\n1103124\tMr_Bugman\t245\n1102960\tSocioMensuras\t171\n1101863\tmarcelaroby\t50\n1101100\te_scribbler\t287\n1095276\tBauerDMont\t237\n1087900\tAleGomezFabio\t87\n1085645\tQuemero1971\t56\n1082985\tMage_Delbene\t52\n1070244\tleo_argentino\t187\n1055860\t_paulitad\t53\n1051589\tmalicaas\t50\n1042080\tluisalbertocok\t49\n1037646\tArmandoCorallo\t52\n1037258\tEcgius1\t75\n1036338\tlanavecomunica\t167\n1035705\tanamarianat\t56\n1035450\tanysuarok\t55\n1034447\tausthralis\t90\n1029442\txenia43sailor\t59\n1028650\tMaggieBu1\t51\n1024278\tv_damin\t54\n1022067\tSusyRuibal\t58\n1020360\tRex_Aluminio\t166\n1019865\tMouse048\t56\n1018024\tedumar58\t50\n1017092\trobot93_mr\t179\n1014937\tkittyGorila\t50\n1014049\tanitamiraglia\t54\n1009415\tcorazonpincha78\t56\n1003500\tBeltraminCarlos\t181\n1001511\tSanti10243570\t50\n1000512\tElunicocanaya\t55\n999639\tnormymdq\t110\n998688\tCienlunas\t49\n996588\tnotienred\t280\n995106\tV_CD_TV\t58\n994161\tKeiraNightly2\t50\n991480\tlilifinochietta\t71\n989050\tNoTengo70188516\t51\n988266\ttapetolomei\t115\n983694\tdunnowhich\t68\n982653\tCataCiclon\t74\n980548\tdragonfrances\t59\n979731\tnormi1659\t70\n979336\tedgyportenio\t69\n977320\tmartalanza77\t54\n971302\tMonicaSaposkin\t48\n971244\tMirtaC10\t55\n969651\tKTEPASACALABAZA\t82\n969312\tmyrnaalfaro1\t49\n959777\tElCipayo\t200\n959092\tVigoroth92\t164\n958428\tecodeldia\t159\n957558\tfantoche_triple\t148\n949230\tLauraadri\t160\n949050\tmarisachef1\t55\n945250\tgalleta1976\t51\n940282\tmirthy01\t48\n939792\temma_anam\t49\n936972\tgalaparadali\t52\n933810\ternestocela\t86\n928761\tcerlibre\t52\n928080\tLeuco790\t181\n927123\tCeciliaGaitan8\t44\n922220\tedithlucero8\t53\n922089\tfloridatuku\t58\n917136\tPopulismomata\t109\n911232\tMagaritaVarela\t73\n906948\tBenu2015\t43\n906870\tCheMendele\t130\n905128\tEduardoFeimann\t197\n903045\talefinocchiaro\t196\n901692\tJulioac13\t139\n901440\tStelmar6\t61\n900224\tElisaCarrioArg\t209\n895850\tPFlaviola\t51\n890944\teslabrujadel71\t65\n889369\tjci20142015\t44\n887232\tMaCris1540\t49\n883417\tJota_eMe1917\t264\n873810\t2c658a17ee36456\t46\n872950\tAlicie33\t66\n871877\tLanata_2_0\t182\n866125\trevisbarcelona\t326\n862960\tsebameleno\t336\n861396\tC5N\t277\n858800\tisacia\t51\n857700\tbeatriz_char\t46\n851571\tREINA_MENCIA\t50\n851326\tSemabe2010\t74\n850840\tariel317c\t41\n849520\tLauraUmbides\t41\n848756\tNicolettaArg\t68\n847710\tHoraOmega\t91\n847702\tcomartino\t44\n844000\tmavirginiagomez\t161\n843684\tDIEGOHREY\t168\n840456\tnicogonza1981\t55\n838948\tineine062\t45\n835361\tVecinosBelgrano\t44\n834705\tROTIFLORESTA\t406\n833327\tRominasalto\t98\n831708\tWalhallaMann\t152\n830520\t06_release\t136\n829090\tdaisiesthepigs\t86\n826413\tFerIglesias\t178\n825762\tthekinglizard75\t43\n822782\tbeatrizr591\t48\n820640\tsusanaberasturi\t47\n814663\tclaudio_ramis\t54\n812420\tELJUSTICIERO115\t50\n811114\tcaabdde1648749f\t75\n805564\tSilEverywhere\t75\n797640\tCNHArgentina\t137\n795570\tMaestroPortenio\t231\n793022\tsucede12\t39\n791160\tAnhaylo\t41\n790684\tTonyCanob\t44\n787840\tAiedayl\t65\n785934\tmykonos2002\t48\n785440\t6mor437\t41\n780886\tsilencioypalabr\t42\n780516\tromanroberto\t55\n779300\tangieywillie\t51\n778741\tROXANNACLAUDIA\t68\n778358\talmafunmi93\t54\n778260\tpsirven\t211\n773301\tPocoDeCurtura\t124\n772926\tmonicamabelnoug\t43\n772520\tideasoestenoti\t63\n767319\treinosporti3\t62\n766668\tCARODANNA3\t43\n764352\tDOMINGUEZEDIT\t73\n762480\tBettyScarponi\t61\n753402\tAnaScotfield\t79\n752441\tLuisDicio_\t54\n751674\tmama_potatoes\t43\n751582\tAgenciaElVigia\t212\n751332\tDeSangreTana\t59\n747441\taries2011956\t58\n745542\tsoniaalesso1\t127\n741470\tadria51\t54\n739959\tGloriequen\t52\n735268\tEmme1E\t189\n730276\tvidalSantaFe\t159\n728951\tassforall\t158\n728884\tDruidblogger\t132\n728200\tbastadek\t45\n727920\tAngelaDiMatteo5\t37\n725977\tadripro59\t38\n719492\tMaruchita221\t77\n716856\tMarisaNiemiz\t52\n715761\tflandivar\t202\n715000\tMmeylo\t45\n713736\talbertodefazio\t185\n713690\tMonicaTossi\t59\n711892\tMACRIunHIJOPUTA\t77\n711804\tkala72lol\t47\n711620\tLuz_opinando\t47\n710850\tchipicastillo\t176\n710493\tArielJob\t70\n707866\tsylviaintoronto\t44\n706471\tGabywierig05\t42\n704448\tg240658\t49\n704200\tnorberselvetti\t36\n701952\tTamaraVitelli\t49\n701330\tTerolaMerula\t44\n700635\taquisiclaudia\t66\n699840\tRaimonWalter\t41\n698970\tJubepeLa\t47\n698234\tOBerretta\t47\n697374\tradicalesposse\t107\n697073\tAjoMarco2016\t44\n695475\tzhari02\t46\n694050\tViejoBlues\t151\n693193\tluisrodriguezrm\t140\n693146\tmilner6569\t42\n691353\tpasareltiempo\t40\n690399\tVicAreas1\t124\n689600\tepidemia_59\t41\n689481\talcrija\t40\n688142\tAdrianaBonda\t39\n682484\tvivianalacroze\t45\n681625\tSarams08\t36\n680160\tcorinaMwilliams\t41\n678960\targpriok\t73\n670839\tGradeStafe\t40\n663974\tcristian_cba_19\t39\n663936\tceciba05\t65\n659319\tSuRiego\t58\n656352\tlaflorcita73\t54\n653352\tjuanlguerra1\t43\n653250\tri8166\t66\n651596\todaneucic\t45\n649535\tEscorpiana89\t38\n649026\tjrochaga\t127\n648968\tyanquee\t185\n647320\tbettymagda2010\t41\n646695\tLOLAMORA2005\t46\n644356\tVidalistas\t165\n644204\tGrondavia\t45\n637441\tmonipampa\t50\n637080\tFedede10\t121\n635655\tFlavioBuccino\t156\n635629\tau9beat\t54\n633318\tSilcristu\t52\n629952\tAgustinaRosa2\t52\n629812\tsosaee10\t39\n628110\tquiquequa\t43\n627156\tmaria1martinez1\t37\n627054\tsilviarienzo\t42\n624358\tjorgevelezano\t50\n623241\tSmmMaris\t42\n620280\tmboren65\t46\n619596\tjosenoain3756\t55\n617688\tArt22CNA\t47\n615451\tAuntDahlia2\t42\n615347\tmabalicia\t38\n614061\tKIKAdeAlmodovar\t58\n612766\telzapatofono\t78\n612425\tJPlauto\t56\n611380\tMarcela01404806\t45\n610624\tRitaSalgado1944\t57\n609264\tantoniogiangro5\t49\n608784\tML00Garcia\t133\n608256\tDylanClaudio1\t49\n606996\tsonia_storani\t37\n605346\tlucaslauriente\t1422\n601230\tAriel67862723\t36\n597575\tmawiniarski48\t42\n596570\tHECTORYEMMI\t170\n596134\testelascarione\t50\n596030\tSrtaTroncha\t39\n594432\tlaura424244\t73\n594218\tGracielaGallega\t35\n589057\tlauraharkins\t44\n588798\tBALCARCE3\t43\n588525\tzarha54\t60\n588472\trafabazan13\t35\n586173\tjaz_f45\t272\n586008\tbiguaboquita\t55\n585922\tMGerbaudo1\t35\n585810\tmaricluga\t46\n585720\tHelgueraOscar\t37\n585351\tBuda48\t40\n585304\tDylanSilvero\t47\n584087\tLANACION\t182\n582528\tSebastiangdlCh\t149\n580040\tMartiniGloria1\t41\n578053\tHUGOCASA07\t48\n577317\tmarysosa1111\t132\n577158\tNielsenEcon\t63\n576495\tnokeador1\t116\n575599\tAhoraPrestamos\t42\n573496\tbuccinomarivin1\t134\n572565\tmontepaju\t134\n571516\tcatriel224\t45\n571120\tEl_hijo_fallado\t177\n570251\tAMG_Argento\t48\n567606\tagufran1\t40\n567177\tsoyheimdal\t40\n560320\tarleslalectrice\t35\n560247\tgonzaloDonner\t44\n559968\tlilygabet\t49\n559810\tmaurotripaldi\t371\n559482\tFamCas1\t50\n559317\tJoACFKo\t188\n558912\tale_luisb\t42\n558648\tasdallasta\t73\n558320\tGla2410\t36\n557992\tAnitaSpadaro244\t39\n557710\tpenguinkiller62\t87\n556458\tanamariaifran\t43\n555934\tAidafrascarelli\t35\n554688\tpablomanics\t109\n553356\tkarinahuerta123\t58\n552960\tmartuchato\t41\n548000\telzeide\t41\n547750\tmaquu85\t51\n545472\tevsabb\t37\n544713\tNqnAndrea\t40\n544019\tibst77\t32\n543582\tNicolasdelCano\t208\n543027\tGercel0703\t32\n541069\trabm57\t44\n541024\teduarillo\t45\n539306\tOPEROMANO\t44\n538146\tguillermolanz\t43\n536218\tsecsagenaria\t39\n535605\tnescar27hotmail\t36\n534660\tOTere0696\t31\n534440\tmariavaggemore1\t63\n534024\tAliciaAleg\t37\n532392\tfranciscoscarfo\t57\n531996\tSolanopo\t259\n530886\tJuliaSara3era\t47\n526636\tZeballosBea\t45\n525876\tgra1956ov\t40\n525700\tnininco49brc\t51\n523640\trinconet\t248\n520902\tgraoms\t44\n518410\tclaulegs1\t48\n517680\tdivagrace31\t41\n517517\tgladbip\t78\n516890\tmirisilnov\t38\n513420\tClau_claudius8\t61\n513135\tgra_anselmo\t28\n512120\tGustavoG1980\t41\n511600\tnexospotso\t41\n511525\tnrGloria\t80\n507475\tadelmagc\t54\n504902\tCharlyWsurf\t38\n503874\tpanteragrasa\t187\n503808\trigo_alicia43\t42\n503615\tmoiracalvetti\t36\n501240\tSoledadRanieri\t41\n500724\tcuervo727\t37\n498960\thoroman61\t34\n497799\tHoracioJaime5\t28\n497391\tveroloren\t112\n497301\ttiempoarg\t200\n497052\tSusross1\t37\n496776\trelitobel\t85\n496651\tTLstfe\t38\n496100\tmumimumi09\t56\n494640\tAliciaSutil\t41\n493728\tmiriamm1963\t33\n492359\troa_isa\t38\n489792\tverproyectos\t49\n488992\tpetronila4805\t33\n487836\tsilvi2002\t37\n487485\ttunykollmann\t136\n487305\tPatriciaConti9\t36\n486587\tglaveanton\t38\n486570\tnisacholula\t36\n486390\t_patitom\t32\n485826\tGabSabattini\t34\n484341\tjorgefesic\t34\n483990\tchicadepueblo47\t35\n482940\tBarriFut\t46\n481688\tlapaketonga\t39\n481312\tnoem1112\t53\n480876\tluzzmar170\t45\n479360\tteresaf87472873\t29\n478414\tNorbertoLamas\t35\n478324\tCondenaNacional\t155\n477820\tSusanitaG1\t29\n477432\tlapuyutana\t77\n476112\tvimocris\t43\n475245\tmsv47\t46\n474062\tpatriciadagost3\t35\n471936\tCataplumba\t33\n470594\tcointreau65\t35\n470400\tCamilaCuseta\t36\n469778\tleonardopaz1969\t35\n467360\tBargasNayu\t33\n465192\tlau_pan76\t29\n463423\tCeciNeguembor\t42\n460835\tDiabla1251\t38\n460800\tmonros1\t33\n460530\tosvaldo_marino\t36\n459480\tLilaAram\t36\n459405\tcronista9\t206\n459195\tenri3163\t34\n458640\testudioalborno2\t50\n457660\tpachecoRG\t29\n457128\tneghina2050\t29\n452640\tAslaug59\t42\n452384\tinesfri\t33\n450723\tindignada9\t40\n449307\tBarizomartin\t130\n447180\ttresher2\t30\n446861\tcaro01970\t30\n446176\tbonaudo43\t33\n445032\tcaballobosterok\t43\n444060\tNo_masKKs\t37\n443937\tluzdelmar1959\t40\n443040\tgracielasanz191\t33\n442060\tLauramoreiras52\t47\n441507\tClaudiaArgent\t52\n439988\tLAZZUBIA\t59\n436968\tmrgr2011\t43\n436458\tkrauspapo\t34\n435420\tPatriciaOtharan\t42\n432201\tmonicaffobertel\t34\n430745\tRikimza\t32\n429474\tjuaniheres0605\t32\n426624\tPineiroGladys\t25\n426132\tTOTTYGREEN\t77\n425997\tkmacandall\t34\n425898\tVeritoalmi\t67\n425832\tpiva_adriana\t45\n425451\tjohana17017\t40\n425180\tDoraAliyauck\t71\n424944\telpachacardozo\t37\n423873\tnitoardid\t28\n423384\tyoconelcambio\t119\n422503\tLeperaBetty\t38\n421736\tMirentxua\t29\n421602\tajms7\t30\n421110\tMARTINFULMAN\t31\n420896\tcorcho1316\t113\n420800\tsandraibertis\t33\n419822\tgabrielatusi74\t27\n419160\tsanara61\t36\n419084\tBlopa0703\t35\n418147\tdi__tir\t80\n417396\tAnastasazia\t43\n417361\tadrianalpmqlp\t110\n416058\tliliwaba\t35\n415962\tmilimatufeli\t28\n415560\tclaudia5937\t31\n415036\tcarlosDesantosT\t39\n414290\tMichuLele1\t35\n413523\tLecatoloko\t34\n413490\tCuni631\t31\n412646\trosag_amarilla\t27\n410730\tlucilahary\t31\n410592\tPIRATAS2017\t29\n410333\tEmmaDLRS\t78\n410219\tjorgebrutus\t38\n409590\tcr_nielsen\t31\n408291\tgalejandroz\t30\n408275\tmmarcioiu\t36\n408072\tkalipolis\t85\n407400\tGoliathOk\t101\n405916\tLucianaCq\t29\n404430\tNonidora\t27\n403732\tsquevedo873\t29\n402996\tcrpaoladi\t87\n402640\tEugenia41012113\t36\n401926\tnattycs501\t39\n401600\tSambucoSambuco3\t26\n399270\tanna12945081\t31\n398300\tMorescocarlosro\t26\n398178\tsolesalva\t100\n394550\tRicardoCarrizo5\t26\n394383\traul_russi\t34\n394152\tAlanizFabio\t25\n393816\tStolbizer\t270\n391646\tElbaMangiante\t35\n391442\tpedrovega59\t30\n390879\tNanNFC\t94\n390773\tOBIWANKENOBIOK\t132\n389974\tjorgeoscar00\t27\n389546\tFernandojGh\t62\n389122\tamaly57\t30\n388710\tLamoni_K\t46\n388665\tcarloslancome\t28\n387392\tAleCorail\t33\n387180\tJulietaCrippa\t37\n386350\tgraciela2862\t26\n386240\tmlautorre\t143\n386064\tscar2512\t29\n385875\tNachoAgz\t106\n384997\tmirthasur\t24\n384744\tCerillo80\t70\n384424\tmafcgml\t59\n383190\tJMastrizzo\t31\n381501\tEmmaGarciaOzan\t24\n381344\teducacion_pub\t35\n380339\tElibeGoy\t32\n380026\tJuanVi77a\t140\n378972\tLaurayJaviSFco\t133\n378924\tA_marucevich\t40\n378672\tjjohnnyglamour\t43\n378664\thbonanata\t45\n378092\tivannoarg\t27\n377730\tsandybg1502\t28\n377468\tLeopeninsular1\t27\n376998\tgratoledo1\t39\n376395\tCasaRosa19\t70\n376110\tverdadcosmetica\t36\n375984\tnandalaplace59\t29\n375328\tMagdalenaM21\t38\n374666\tAdri01961\t32\n374385\tmarisalaura25\t56\n373346\tsanlil4\t42\n372780\tfernetmendocina\t31\n372108\tMABELSUSANAHERR\t34\n371174\taliartesana\t47\n370750\tNoecarestia\t26\n370668\tcaro77here\t47\n370470\t886907be0dfe443\t31\n368730\tohsamaisalive\t103\n367632\trdsalva\t37\n367034\tLosPibesCTA\t159\n366752\tsilvi412\t33\n366696\tludovica007\t25\n366314\tEugeniaRiadigos\t74\n366079\tlilianascudiero\t32\n365978\tLoboGonzo\t39\n365332\tGeorgefreak\t23\n364738\tcarinasp7\t23\n364068\tangelaboni21\t28\n363100\tmiriucba1\t26\n362940\tmagoya2001\t93\n361920\tcano_972\t27\n360392\tindiosdelavega\t39\n359165\tchrichiardi\t30\n358715\tlescudero56\t36\n357136\tpfrieder\t27\n356345\tJuanDiaz1958\t32\n355005\tromerodiario\t148\n354094\tElbaSchajris2\t27\n352811\tLOPISTA\t32\n352128\tcapitanqueso\t33\n351750\tperfumealibro\t26\n350500\tRODOLFOALALUF\t26\n348600\tMarFPaz\t25\n347725\ttatita2772\t26\n346892\tLilianaSimoes4\t27\n346700\tMarka24\t26\n345750\trata2710\t31\n343431\tMimarcaregistra\t34\n343402\tedgerome\t104\n343397\tnancygrimberg\t38\n343125\tSoniaRu45511286\t26\n342280\tLunaRios1960\t44\n342258\tleonxxxiii\t88\n342180\tYachayhuasis\t46\n342036\tmoniromboli\t28\n341582\tpmolle990\t90\n340286\tRodolfoZelaya9\t30\n339735\tgusporta\t34\n339660\tdonmauri71\t69\n338075\tSUSYMURATURE\t26\n337440\tOkampus\t31\n337275\trolinberg\t26\n336265\tMomentsES\t110\n334863\tNoritaBianco\t30\n334628\tlanacionmas\t134\n334600\tSilvanaItuarte\t29\n334314\ta_b_berurier\t83\n333676\tMarcela43613681\t29\n333648\tDEM___\t145\n332971\tPijuanTeresa\t32\n332784\tAraujoSandruly\t37\n331976\tnelidahenri\t35\n330980\tAlinaNellen\t27\n330939\tzeinicienta\t154\n329336\tAguirreSandram\t29\n329160\tMarthaSusanaK\t27\n329088\tyomaridel\t33\n328941\tVidelaSol\t32\n328878\tdragonesdenano\t34\n328200\thoracuello\t31\n327080\tRclaudiaG\t27\n327021\tJacarandaenFlor\t62\n326902\tdanielguidi333\t159\n326716\tclaudiodipaola1\t27\n326700\tElbiCortezFunes\t37\n326538\tsiriharnarayan1\t28\n324972\tFilmusDaniel\t178\n324971\trielias22\t38\n324819\tlibrianasolita\t34\n324368\tElAnti_M\t177\n323748\tpsurtubi\t93\n323328\tcacerolapop\t65\n323148\tbomarzo27\t22\n322900\tThalermari\t26\n322560\tFilipovolo\t36\n321948\tHumpyDumpy5\t55\n321760\talejandritaro\t33\n321540\tmajogm\t116\n320320\trussocaro18\t29\n320320\tBabelgrace\t29\n320283\tHCAQUILMES\t58\n319464\tbeatrz4\t28\n318550\tRoxDeLuca13\t26\n318423\tVeroEsperan\t22\n317790\tgabrielasrag\t31\n317730\tEstelaCassineli\t31\n317400\tlauale5\t26\n317352\tRuetE\t57\n317216\tLilianaSnchez9\t24\n317125\tlorca07\t26\n316256\tzanoni31\t33\n315488\tplivestrong\t33\n314720\treneedevargas\t29\n314616\tmlcallaba\t25\n314158\twd_Fonseca\t27\n313770\tmarchitoma\t31\n313150\tNatitaLuC\t26\n313030\tBibianaSalfi\t24\n312768\tJorgeSa67223135\t37\n312039\tJosefinaPiccio1\t28\n311612\tGonzaloSueiro\t63\n310612\tDoYouLoveMe666\t135\n310460\ttina_maschris\t39\n309904\tMsgLaguna\t29\n309408\tTinchex_ok\t33\n309120\tavellanedamm1\t21\n307872\tpaloma74735236\t49\n307866\tJAVO_TE\t27\n307255\tMyrshaAM\t30\n306530\tCFArgentine\t30\n305256\tmalcomgomez\t93\n304842\tHoracio246\t139\n304368\tClaudiaROzores\t35\n303960\tMonib253Sovo\t25\n303180\tCastelliJonesA\t31\n302644\tlaurafrivas\t30\n302438\tSutebAvellaneda\t62\n301975\tFuriaRusa\t26\n301825\tMarite82267291\t26\n301425\tElChiqui51\t26\n301378\tMPParis\t20\n300556\tmalakcba\t59\n300267\tElGorilaje\t100\n299844\tGonzaloArgento1\t37\n299575\tmaitenafirulai\t26\n299565\tNoraRpa\t28\n299274\tjoaser8\t32\n299182\tDiegoShibolet\t27\n298512\tmnlucca\t49\n298405\tVictoriaPazOK\t38\n297625\talejandra_save\t26\n297569\tluckfor\t32\n297482\tDONJULIO400\t30\n297360\tCristianRasmus1\t29\n297308\tlaura_ayude\t45\n297134\tdoralilianasimn\t48\n296637\tMargaWirkierman\t102\n296281\tAlechaschas\t90\n295944\tbarzadafne\t34\n294700\tJudithTiauiti\t26\n294640\tmatildeflora\t30\n293802\tlizi_varga\t70\n293176\tAlsinaJuana\t27\n293050\tsandradelvallex\t26\n292941\tmargacortesvela\t34\n292810\tAngeldebritoOk\t446\n291686\tMariaDe3116\t24\n291519\tArgentinaInfo1\t28\n291519\tJustoStella\t28\n291450\tpedro45sf1\t26\n291200\tpierorapa\t26\n290948\tVeroSks\t29\n290927\trositanlove1\t24\n290682\toscartatengue1\t28\n290326\tjcpoblet\t35\n290184\tdancrisile1\t25\n289800\tAdrianymyrian\t37\n289225\tpelusaroma\t26\n288288\tfedeposadas\t25\n287730\tBeaTesouro\t47\n287520\tArgentinaAlta\t25\n287385\tSu_Ferraro\t24\n287378\tElGordoVic\t27\n286832\tlapolaca03\t27\n286418\tkoberTeresa\t23\n286104\tleoalfaro02\t92\n285272\tperonistsheep\t339\n284688\tngutani\t25\n283260\tHenryLo51238658\t21\n282940\tlillian_ibarra\t29\n282744\tglacecgas\t25\n282348\tmarcelanricci86\t37\n282141\tWalyss78\t24\n282141\tjcs_58\t30\n282123\tScooby_Doo_11M\t28\n282100\tKrisargentia\t21\n281938\tmarimartasmart\t30\n281664\tmarymar_2012\t28\n281612\tjorge06218084\t24\n281474\tElQastor\t30\n281124\tluletobe\t39\n279070\tFakyFer\t23\n278970\tFlorenciaMatur6\t52\n278580\tmiguelgustavoro\t21\n278328\tsigrani\t25\n278166\tsisigalit\t22\n277992\tmibe_cubas\t27\n277896\tNoraPaolis\t25\n277746\toscarchanc\t22\n277431\tfradenno1960\t34\n277398\tZilOliv\t55\n276771\tbustamantealejo\t34\n276678\tflopita_c\t20\n276573\ttinkunaco\t30\n276526\tAmeidaKevin\t20\n276408\tmansoalicia\t23\n275940\tmirthaviso19991\t29\n275886\tgracybellu\t28\n275862\t8740miguel\t24\n275576\tCANDELA2010\t20\n274824\temetedeme\t25\n274692\tmiriamama15\t23\n274525\tEl_vengaK\t140\n274429\tbearevainera\t38\n274416\tAlejandroPeder1\t25\n273840\tProfeOpositora\t49\n273723\tpikitina99\t24\n273700\tDianaVe97272669\t29\n273105\tirmakoch\t36\n272880\tNysNober\t37\n272790\tIloveRA25\t31\n272389\tVilma_Rosario\t24\n272376\tCarrai22\t27\n271782\tINFOnews\t127\n271152\tdvconte\t22\n270860\tOrugaChina\t21\n270019\tomar49x100\t30\n269934\tajmbertotti\t22\n269610\tsusanafrias1\t20\n269496\tSulrubicone\t37\n269328\tSantiAysine\t745\n269136\tFaMaCa33\t37\n268884\tserewhitena1617\t22\n268050\tRal15884920\t31\n268002\tmarumorey\t19\n267960\tArgentinaSinK\t31\n267435\tmaritabairesarg\t36\n267225\tbereviscardi\t26\n266924\tanimartinez6\t29\n266860\tchangospasiuk\t221\n266600\tchechifp\t44\n265336\tLuchita9\t18\n264810\tvascotellechea1\t27\n263815\tDraSuMar\t20\n263780\tAlberdianoArg\t110\n263328\tmarisolsolari1\t25\n262602\t4a356f1dd73f489\t28\n262246\tDrPepino2\t24\n262080\telestanciero2\t85\n261711\talice333333\t28\n261029\tnormaaalvarez1\t30\n260904\tMoniCarabus\t29\n259653\tRODRIGOSOLER64\t42\n258434\tLRA1CN\t23\n257257\tEquipoCFK\t144\n257166\tBrujaUniversal\t127\n257002\tsetastellam\t24\n255533\taliciacristinar\t32\n254840\tF10Patri\t24\n254771\trapunzeldin\t20\n254436\tanainesbernal\t29\n254248\tyeorgigiorgio\t62\n253275\tprensaobrera\t166\n252681\tDnAkd2947\t34\n252468\tyosoygemma1\t37\n252168\troccahector1\t25\n251616\tlunayrio\t25\n250775\tArgentinaLucia\t26\n250749\tcosovschi\t252\n250716\tmurziocanto\t35\n250382\tbechara_judith\t20\n250260\tbetyforgione\t31\n"
+          },
+          {
+            "type": "HTML",
+            "data": "<div class=\"result-alert alert-warning\" role=\"alert\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button><strong>Output is truncated</strong> to 1000 rows. Learn more about <strong>zeppelin.spark.maxResult</strong></div>\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "ci\tid\tdegree\n71551312\tWinston_Dunhill\t2325\n57822552\tsantosjorgeh\t1657\n55026688\tfernandocarnota\t1745\n45848634\tJorgeFavaloro\t1483\n42052088\tlanatoparatodos\t1529\n37856910\telcoya1977\t1471\n33925374\tbetovaldez\t1407\n31175045\tLaBelgrana\t606\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "a\te\tb\n[31175045,LaBelgrana,606]\t[LaBelgrana,Winston_Dunhill,340,2]\t[71551312,Winston_Dunhill,2325]\n[31175045,LaBelgrana,606]\t[LaBelgrana,betovaldez,510,3]\t[33925374,betovaldez,1407]\n[31175045,LaBelgrana,606]\t[LaBelgrana,fernandocarnota,170,1]\t[55026688,fernandocarnota,1745]\n[45848634,JorgeFavaloro,1483]\t[JorgeFavaloro,santosjorgeh,79,1]\t[57822552,santosjorgeh,1657]\n[31175045,LaBelgrana,606]\t[LaBelgrana,lanatoparatodos,170,1]\t[42052088,lanatoparatodos,1529]\n[31175045,LaBelgrana,606]\t[LaBelgrana,JorgeFavaloro,170,1]\t[45848634,JorgeFavaloro,1483]\n[31175045,LaBelgrana,606]\t[LaBelgrana,elcoya1977,340,2]\t[37856910,elcoya1977,1471]\n[31175045,LaBelgrana,606]\t[LaBelgrana,santosjorgeh,680,4]\t[57822552,santosjorgeh,1657]\n[55026688,fernandocarnota,1745]\t[fernandocarnota,fernandocarnota,24,2]\t[55026688,fernandocarnota,1745]\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "src\tdst\nLaBelgrana\tWinston_Dunhill\nLaBelgrana\tbetovaldez\nLaBelgrana\tfernandocarnota\nJorgeFavaloro\tsantosjorgeh\nLaBelgrana\tlanatoparatodos\nLaBelgrana\tJorgeFavaloro\nLaBelgrana\telcoya1977\nLaBelgrana\tsantosjorgeh\nfernandocarnota\tfernandocarnota\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "id\nLaBelgrana\nLaBelgrana\nLaBelgrana\nJorgeFavaloro\nLaBelgrana\nLaBelgrana\nLaBelgrana\nLaBelgrana\nfernandocarnota\nWinston_Dunhill\nbetovaldez\nfernandocarnota\nsantosjorgeh\nlanatoparatodos\nJorgeFavaloro\nelcoya1977\nsantosjorgeh\nfernandocarnota\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=361",
+              "$$hashKey": "object:215250"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=362",
+              "$$hashKey": "object:215251"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=363",
+              "$$hashKey": "object:215252"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=364",
+              "$$hashKey": "object:215253"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=365",
+              "$$hashKey": "object:215254"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=366",
+              "$$hashKey": "object:215255"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=367",
+              "$$hashKey": "object:215256"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=368",
+              "$$hashKey": "object:215257"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=369",
+              "$$hashKey": "object:215258"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=370",
+              "$$hashKey": "object:215259"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=371",
+              "$$hashKey": "object:215260"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=372",
+              "$$hashKey": "object:215261"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=373",
+              "$$hashKey": "object:215262"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=374",
+              "$$hashKey": "object:215263"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=375",
+              "$$hashKey": "object:215264"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=376",
+              "$$hashKey": "object:215265"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=377",
+              "$$hashKey": "object:215266"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=378",
+              "$$hashKey": "object:215267"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=379",
+              "$$hashKey": "object:215268"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=380",
+              "$$hashKey": "object:215269"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=381",
+              "$$hashKey": "object:215270"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=382",
+              "$$hashKey": "object:215271"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=383",
+              "$$hashKey": "object:215272"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=384",
+              "$$hashKey": "object:215273"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699534892119_1707554835",
+      "id": "paragraph_1699534892119_1707554835",
+      "dateCreated": "2023-11-09T13:01:32+0000",
+      "dateStarted": "2023-11-09T15:31:44+0000",
+      "dateFinished": "2023-11-09T15:32:05+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:213443"
+    },
+    {
+      "text": "%pyspark\n\ntopInfluencers = collectiveInfluence.orderBy(\"ci\", ascending=False).limit(8) # solo los 8 primeros\n\ngTops2 = GraphFrame(topInfluencers, graph.edges)\n\n# Solo las aristas que salen desde los tops\nres1 = gTops2.find(\"(a)-[e]->()\")\neTops2 = res1.select(\"e.src\", \"e.dst\")\n\n# Junto todos los vertices de las aristas\nvTops2s = eTops2.select(col(\"src\").alias(\"id\"))\nvTops2d = eTops2.select(col(\"dst\").alias(\"id\"))\nvTops2sd = vTops2s.union(vTops2d)\n\n# Agrego ci a los vertices con left join\nvTops2 = vTops2sd.join(collectiveInfluence, \"id\", \"left\").distinct()\n\nprint(\"Cantidad de vertices\", vTops2.count())\n\n# Agrego columna con nombre para Gephi y guardo csv vertices\n\n\nprint(\"Cantidad de aristas\", eTops2.count())\n\n# Agrego columnas con nombres para Gephi y guardo csv aristas\neTops2.withColumnRenamed(\"src\", \"Source\")\\\n    .withColumnRenamed(\"dst\", \"Target\")\\\n    .coalesce(1)\\\n    .write \\\n    .csv(\"logs/top_edges2.csv\", mode=\"overwrite\", header=True)",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-09T19:58:20+0000",
+      "progress": 20,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Cantidad de vertices 120\nCantidad de aristas 122\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=432",
+              "$$hashKey": "object:215336"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=433",
+              "$$hashKey": "object:215337"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=434",
+              "$$hashKey": "object:215338"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=435",
+              "$$hashKey": "object:215339"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=436",
+              "$$hashKey": "object:215340"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=437",
+              "$$hashKey": "object:215341"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=438",
+              "$$hashKey": "object:215342"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=439",
+              "$$hashKey": "object:215343"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=440",
+              "$$hashKey": "object:215344"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=441",
+              "$$hashKey": "object:215345"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699537397784_1432917249",
+      "id": "paragraph_1699537397784_1432917249",
+      "dateCreated": "2023-11-09T13:43:17+0000",
+      "dateStarted": "2023-11-09T17:15:24+0000",
+      "dateFinished": "2023-11-09T17:18:49+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:213444"
+    },
+    {
+      "text": "%md\n### Ejercicio\n\n0. Tomar el grafo de tweets y crear un dataframe con todas las aristas y vértices que forman triángulos dirigidos. O sea, todos los casos donde un usuario *A* retuitea a *B* que retuitea a *C* que retuitea a *A*.\n\n0. Hay casos donde los tres usuarios sean distintos?\n\n0. Graficar con Gephi el último resultado.\n\n#### Ayuda\n\n* Cantidad de vertices = 415, cantidad de aristas = 1006.\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-09T14:49:07+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": true,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 12,
+        "editorHide": false,
+        "results": {},
+        "enabled": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897976_860421559",
+      "id": "20201030-122513_420199213",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:213445"
+    },
+    {
+      "text": "%pyspark\n\nntriangulos = c.find(\"(a)-[ab]->(b); (b)-[bc]->(c); (c)-[ca]->(a)\").cache()\nz.show(ntriangulos.limit(20))",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-09T20:49:14+0000",
+      "progress": 20,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "a": "string",
+                      "ab": "string",
+                      "b": "string",
+                      "bc": "string",
+                      "c": "string",
+                      "ca": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          },
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "a": "string",
+                      "ab": "string",
+                      "b": "string",
+                      "bc": "string",
+                      "c": "string",
+                      "ca": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "a\tab\tb\tbc\tc\tca\n[ngelDavidNieva1]\t[ngelDavidNieva1,ngelDavidNieva1,30,2]\t[ngelDavidNieva1]\t[ngelDavidNieva1,ngelDavidNieva1,30,2]\t[ngelDavidNieva1]\t[ngelDavidNieva1,ngelDavidNieva1,30,2]\n[ONCA_TvR_Arg]\t[ONCA_TvR_Arg,ONCA_TvR_Arg,2,1]\t[ONCA_TvR_Arg]\t[ONCA_TvR_Arg,ONCA_TvR_Arg,2,1]\t[ONCA_TvR_Arg]\t[ONCA_TvR_Arg,ONCA_TvR_Arg,2,1]\n[judrh]\t[judrh,dccolectivo,2,1]\t[dccolectivo]\t[dccolectivo,mamibel09,35,1]\t[mamibel09]\t[mamibel09,judrh,8,1]\n[GabrielaMasista]\t[GabrielaMasista,agapearg51,58,1]\t[agapearg51]\t[agapearg51,adrianapellaca1,30,1]\t[adrianapellaca1]\t[adrianapellaca1,GabrielaMasista,108,3]\n[RuthPizzi]\t[RuthPizzi,rodolfoCeniz,5,1]\t[rodolfoCeniz]\t[rodolfoCeniz,PabloMGener,42,1]\t[PabloMGener]\t[PabloMGener,RuthPizzi,41,1]\n[C_Echegoyen]\t[C_Echegoyen,SandraDocente,108,3]\t[SandraDocente]\t[SandraDocente,RipamontiRita,15,1]\t[RipamontiRita]\t[RipamontiRita,C_Echegoyen,280,2]\n[waltervazquez21]\t[waltervazquez21,donofriojorge,18,3]\t[donofriojorge]\t[donofriojorge,donofriojorge,44,4]\t[donofriojorge]\t[donofriojorge,waltervazquez21,11,1]\n[waltervazquez21]\t[waltervazquez21,donofriojorge,18,3]\t[donofriojorge]\t[donofriojorge,Florenc32693350,11,1]\t[Florenc32693350]\t[Florenc32693350,waltervazquez21,6,1]\n[waltervazquez21]\t[waltervazquez21,donofriojorge,18,3]\t[donofriojorge]\t[donofriojorge,GurtzDario,11,1]\t[GurtzDario]\t[GurtzDario,waltervazquez21,7,1]\n[formacionIB]\t[formacionIB,formacionIB,6,1]\t[formacionIB]\t[formacionIB,CooperacionIB,12,2]\t[CooperacionIB]\t[CooperacionIB,formacionIB,6,1]\n[formacionIB]\t[formacionIB,formacionIB,6,1]\t[formacionIB]\t[formacionIB,Artesana63,6,1]\t[Artesana63]\t[Artesana63,formacionIB,2,1]\n[formacionIB]\t[formacionIB,formacionIB,6,1]\t[formacionIB]\t[formacionIB,formacionIB,6,1]\t[formacionIB]\t[formacionIB,formacionIB,6,1]\n[FRAlteBrown2017]\t[FRAlteBrown2017,PrensaMSilva,10,1]\t[PrensaMSilva]\t[PrensaMSilva,FRAlteBrown2017,3,1]\t[FRAlteBrown2017]\t[FRAlteBrown2017,FRAlteBrown2017,10,1]\n[FRAlteBrown2017]\t[FRAlteBrown2017,PrensaMSilva,10,1]\t[PrensaMSilva]\t[PrensaMSilva,PrensaMSilva,3,1]\t[PrensaMSilva]\t[PrensaMSilva,FRAlteBrown2017,3,1]\n[ConCiencia2015]\t[ConCiencia2015,lizzieyn,76,1]\t[lizzieyn]\t[lizzieyn,LaBelgrana,20,1]\t[LaBelgrana]\t[LaBelgrana,ConCiencia2015,510,3]\n[titocrespo5]\t[titocrespo5,titocrespo5,7,1]\t[titocrespo5]\t[titocrespo5,titocrespo5,7,1]\t[titocrespo5]\t[titocrespo5,titocrespo5,7,1]\n[jorgebrutus]\t[jorgebrutus,jorgebrutus,297,9]\t[jorgebrutus]\t[jorgebrutus,jorgebrutus,297,9]\t[jorgebrutus]\t[jorgebrutus,jorgebrutus,297,9]\n[Colejobs]\t[Colejobs,Colejobs,6,2]\t[Colejobs]\t[Colejobs,Colejobs,6,2]\t[Colejobs]\t[Colejobs,Colejobs,6,2]\n[PatriciaConti9]\t[PatriciaConti9,Carlos_AD_Viola,36,1]\t[Carlos_AD_Viola]\t[Carlos_AD_Viola,lilifinochietta,59,1]\t[lilifinochietta]\t[lilifinochietta,PatriciaConti9,69,1]\n[interinosMAD]\t[interinosMAD,ajfernandez2001,52,4]\t[ajfernandez2001]\t[ajfernandez2001,MargaMachnJimne,11,1]\t[MargaMachnJimne]\t[MargaMachnJimne,interinosMAD,4,1]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=497",
+              "$$hashKey": "object:215408"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=498",
+              "$$hashKey": "object:215409"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699538579516_1363423187",
+      "id": "paragraph_1699538579516_1363423187",
+      "dateCreated": "2023-11-09T14:02:59+0000",
+      "dateStarted": "2023-11-09T20:49:15+0000",
+      "dateFinished": "2023-11-09T20:50:07+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:213446"
+    },
+    {
+      "text": "%pyspark\nTrian1 = triangulos.select(\"a.id\")\nTrian2 = triangulos.select(\"b.id\")\nTrian3 = triangulos.select(\"c.id\")\nTrian = Trian1.union(Trian2)\nTrian = Trian.union(Trian3)\nTrian= Trian.dropDuplicates(subset=[\"id\"])\n\nprint(\"Cantidad de vertices\", Trian.count())\nz.show(Trian.limit(20))\n\nTrian.select(\"*\", col(\"id\").alias(\"Label\"))\\\n        .coalesce(1) \\\n        .write \\\n        .csv(\"logs/top_influencers3.csv\", mode=\"overwrite\", header=True)",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-09T20:51:15+0000",
+      "progress": 99,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "id": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Cantidad de vertices 415\n\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "id\nwpicatto\ncarfanchi51\nluispagella\nCheMendele\nConstanzaBossio\nHugoYasky\ndianamaffia\nAdolfogusResist\nleonormarquez13\nlulahlois\nJPlauto\nmonicamabelnoug\nGraciel1\nbocabocaok\nlaura_ayude\nElbSergio\nomar_urso\nIib10Iris\npayasobarricada\nTatianaSAV\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=499",
+              "$$hashKey": "object:215452"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=500",
+              "$$hashKey": "object:215453"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=501",
+              "$$hashKey": "object:215454"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=502",
+              "$$hashKey": "object:215455"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=503",
+              "$$hashKey": "object:215456"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699550809240_2141821876",
+      "id": "paragraph_1699550809240_2141821876",
+      "dateCreated": "2023-11-09T17:26:50+0000",
+      "dateStarted": "2023-11-09T20:51:15+0000",
+      "dateFinished": "2023-11-09T20:55:29+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:213447"
+    },
+    {
+      "text": "%pyspark\ntriangulos =ntriangulos.filter(\"a.id != b.id\")\ntriangulos =triangulos.filter(\"b.id != c.id\")\ntriangulos =triangulos.filter(\"c.id != a.id\")\n\nTrian1 = triangulos.select(\"ab.src\" ,\"ab.dst\")\nTrian2 = triangulos.select(\"bc.src\" ,\"bc.dst\")\nTrian3 = triangulos.select(\"ca.src\" ,\"ca.dst\")\n\nTrian = Trian1.union(Trian2)\nTrian = Trian.union(Trian3)\nTrian= Trian.dropDuplicates(subset=[\"src\", \"dst\"])\n\nprint(\"Cantidad de aristas\", Trian.count())\nz.show(Trian.limit(20))\n\nTrian.withColumnRenamed(\"src\", \"Source\")\\\n    .withColumnRenamed(\"dst\", \"Target\")\\\n    .coalesce(1)\\\n    .write \\\n    .csv(\"logs/top_edges3.csv\", mode=\"overwrite\", header=True)\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-09T20:51:17+0000",
+      "progress": 99,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "a": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          },
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "src": "string",
+                      "dst": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Cantidad de aristas 1006\n\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "src\tdst\ndonofriojorge\twaltervazquez21\nGiordanoGringo\tDocentesnMarcha\nCastro_J_Ale16\tJulioPangaro\nPTSarg\tmavirginiagomez\nIib10Iris\tluisrodriguezrm\najfernandez2001\tinterinosMAD\nlizzieyn\tchienlia\nlaura_ayude\tRDSarraute\nmavirginiagomez\tPTSarg\nMichuLele1\tclaudio_fruyano\nmariavaggemore1\tSilviaMarquez24\nArgentina20171\tcliporace\nangieywillie\thbonanata\nPochiRafael\tpenguinkiller62\nmavirginiagomez\tSan_Dom_\narielchacabuco\tnati1555\nLaBelgrana\tVbluesciudadano\nGBoragina\tkimse1\nbocabocaok\tMarcela01404806\ndrova111\tLauraadri\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=504",
+              "$$hashKey": "object:215505"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=505",
+              "$$hashKey": "object:215506"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=506",
+              "$$hashKey": "object:215507"
+            },
+            {
+              "jobUrl": "http://localhost:4040/jobs/job?id=507",
+              "$$hashKey": "object:215508"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699552196111_1285916268",
+      "id": "paragraph_1699552196111_1285916268",
+      "dateCreated": "2023-11-09T17:49:56+0000",
+      "dateStarted": "2023-11-09T20:51:19+0000",
+      "dateFinished": "2023-11-09T20:57:19+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:213448"
+    },
+    {
+      "title": "FIN",
+      "text": "val baseDir=\"https://git.cs.famaf.unc.edu.ar/dbarsotti/diplodatos_bigdata/raw/master/clases\"\n\nz.put(\"baseDir\", baseDir)\nprint(\"\"\"%html\n<script>\n    var heads = document.getElementsByTagName('h2');\n    var numHeads = heads.length;\n    var inner = \"\";\n    var i = 0;\n    var j = 0;\n    while (i < numHeads){\n        inner = heads[i].innerHTML;\n        if (inner.search(\".-\") != -1 ) {\n            j++;\n            heads[i].innerHTML = inner.replace(/(~|\\d+)\\.-/,\"\"+j+\".-\");\n        }\n        i++\n    }\n</script>\n\"\"\")\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-11-09T14:22:25+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": true,
+        "editorSetting": {
+          "language": "scala"
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "editorHide": true,
+        "fontSize": 9,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "baseDir: String = https://git.cs.famaf.unc.edu.ar/dbarsotti/diplodatos_bigdata/raw/master/clases\n"
+          },
+          {
+            "type": "HTML",
+            "data": "<script>\n    var heads = document.getElementsByTagName('h2');\n    var numHeads = heads.length;\n    var inner = \"\";\n    var i = 0;\n    var j = 0;\n    while (i < numHeads){\n        inner = heads[i].innerHTML;\n        if (inner.search(\".-\") != -1 ) {\n            j++;\n            heads[i].innerHTML = inner.replace(/(~|\\d+)\\.-/,\"\"+j+\".-\");\n        }\n        i++\n    }\n</script>\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1699455897976_914756953",
+      "id": "20171010-191336_1667301043",
+      "dateCreated": "2023-11-08T15:04:57+0000",
+      "status": "READY",
+      "$$hashKey": "object:213449"
+    }
+  ],
+  "name": "i",
+  "id": "2JGMDX4J8",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.10.0",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {},
+  "path": "/Clase 08 - Grandes Grafos Sociales/i"
+}
