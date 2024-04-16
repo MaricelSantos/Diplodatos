@@ -1,5 +1,5 @@
 # **Mentoria07**
-## ** Cambio climático y ML: cómo mitigar las emisiones de CO2 mediante la reducción del consumo energético en construcciones edilicias **
+## **Cambio climático y ML: cómo mitigar las emisiones de CO2 mediante la reducción del consumo energético en construcciones edilicias**
 
 **Integrantes:**
 - [Carubelli, Marianella](https://github.com/Mariandela)
